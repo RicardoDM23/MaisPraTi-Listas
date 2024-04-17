@@ -12,15 +12,17 @@ while (count < 50) {
     let primo = true;
     let div = 2;
     do {
-        if ((num !== div) && (num % div === 0)) {
+        while ((num !== div) && (num % div === 0)) {
             primo = false;
+            break;
         }
         div++;
     } while (div <= num)
 
-    if (primo) {
+    while (primo) {
         console.log(num);
         count++;
+        break;
     }
     num++;
 }

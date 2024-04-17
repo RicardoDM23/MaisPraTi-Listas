@@ -18,10 +18,11 @@ console.log('Média Ponderada');
 do{
     num = parseInt(prompt('Informe um número: ')); 
     peso = parseInt(prompt('Informe o peso: ')); 
-    if ((num !== 0) && (peso !== 0)){
+    while((num !== 0) && (peso !== 0)){
         totalNum += num;
         totalPeso += peso;
-    } 
+        break;
+    }
 } while ((num !== 0) && (peso !==0) )
 
 console.log('Média Ponderada:', totalNum/totalPeso);
