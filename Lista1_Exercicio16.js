@@ -8,6 +8,7 @@
 let num = 100;
 let count = 0;
 
+//sem if
 while (count < 50) {
     let primo = true;
     let div = 2;
@@ -26,3 +27,20 @@ while (count < 50) {
     }
     num++;
 }
+
+//com if
+// while (count < 50) {
+//     let primo = true;
+//     let div = 2;
+//     while (div <= num && primo == true) {
+//         if ((num !== div) && (num % div === 0)) {
+//             primo = false;
+//         }
+//         div++;
+//     } 
+//     if (primo) {
+//         console.log(num);
+//         count++;
+//     }
+//     num++;
+// }

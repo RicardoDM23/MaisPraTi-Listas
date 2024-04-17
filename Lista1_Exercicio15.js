@@ -15,14 +15,30 @@ let totalPeso = 0;
 
 console.log('Média Ponderada');
 
-do{
+//Sem if
+// do{
+//     num = parseInt(prompt('Informe um número: ')); 
+//     peso = parseInt(prompt('Informe o peso: ')); 
+//     while((num !== 0) && (peso !== 0)){
+//         totalNum += num;
+//         totalPeso += peso;
+//         break;
+//     }
+// } while ((num !== 0) && (peso !==0) )
+
+//com if
+while ((num !== 0) && (peso !==0) ){
     num = parseInt(prompt('Informe um número: ')); 
-    peso = parseInt(prompt('Informe o peso: ')); 
-    while((num !== 0) && (peso !== 0)){
-        totalNum += num;
-        totalPeso += peso;
+    if(num === 0){
         break;
     }
-} while ((num !== 0) && (peso !==0) )
+    peso = parseInt(prompt('Informe o peso: ')); 
+    if((num !== 0) && (peso !== 0)){
+        totalNum += num;
+        totalPeso += peso;
+    }else{
+        break;
+    }
+} 
 
 console.log('Média Ponderada:', totalNum/totalPeso);
