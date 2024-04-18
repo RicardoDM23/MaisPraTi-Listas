@@ -5,8 +5,10 @@
 */
 
 const prompt = require('prompt-sync')();
-console.log("Utilize . caso seja necessario, exemplo: 28.5")
-let tempCels = Number(prompt("Informe a temperatura em graus Celsius: "));
+console.log("Algoritimo que le uma temperatura em graus Celsius.");
+console.log("Informado pelo usuario e converte para Fahrenheit.")
+console.log("Utilize '.' caso seja necessario, exemplo: '28.5'");
+let tempCels = Number(prompt("1 - Informe a temperatura em graus Celsius: "));
 
 if (isNaN(tempCels)){
     console.log("Não é um valor valido!")
