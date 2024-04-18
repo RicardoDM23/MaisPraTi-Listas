@@ -7,6 +7,10 @@
 
 const prompt = require('prompt-sync')();
 
+console.log("Algoritmo para ler o número de eleitores de um município,");
+console.log("o número de votos brancos, nulos e válidos") ;
+console.log("e retornar o % cada um em relação ao total de eleitores.");
+
 let eleitores = parseInt(prompt('1 - Qual o número de eleitores do município: '));
 let brancos = parseInt(prompt('2 - Número de votos brancos: '));
 let nulos = parseInt(prompt('3 - Número de votos nulos: '));
