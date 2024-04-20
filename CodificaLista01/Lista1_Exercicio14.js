@@ -12,10 +12,11 @@ let total = 0;
 console.log('O algoritimo recebe números decimais.')
 console.log('Até que o usuário digite 0 (zero).')
 console.log('Então retorna a média aritmética.')
-do{
+
+while (num !== 0){
     num = Number(prompt('Informe um número: ')); 
     cont++;
     total += num;
-} while ((num !== 0) )
+} 
 
 console.log('Média aritmética:', total/cont);
