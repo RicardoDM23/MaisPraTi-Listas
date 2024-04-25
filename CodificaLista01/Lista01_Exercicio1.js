@@ -1,6 +1,6 @@
 /*
 * Escreva um algoritmo para ler uma temperatura em graus Celsius, 
-* calcular e escrever o mvalor correspondente em graus Fahrenheit.
+* calcular e escrever o valor correspondente em graus Fahrenheit.
 * Ricardo D. Muenchen 16/04/24
 */
 
