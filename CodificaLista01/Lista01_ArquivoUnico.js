@@ -5,8 +5,10 @@ do{
     switch(exer){
         case '1': case '01':
             console.log("Exercicio 01:");
-            console.log('   Escreva um algoritmo para ler uma temperatura em graus Celsius,\n'+
-                        '   calcular e escrever o valor correspondente em graus Fahrenheit.\n');
+            console.log(
+                '   Escreva um algoritmo para ler uma temperatura em graus Celsius,\n'+
+                '   calcular e escrever o valor correspondente em graus Fahrenheit.\n'
+            );
             let tempCels = Number(prompt("1 - Informe a temperatura em graus Celsius: "));
 
             if (isNaN(tempCels)){
@@ -18,9 +20,11 @@ do{
             break;
         case '2': case '02':
             console.log("Exercicio 02:");
-            console.log('   Escreva um algoritmo para ler o número de eleitores de um município,\n'+
-                        '   o número de votos brancos, nulos e válidos. Calcular e escrever o percentual\n'+ 
-                        '   que cada um representa em relação ao total de eleitores.\n');
+            console.log(
+                '   Escreva um algoritmo para ler o número de eleitores de um município,\n'+
+                '   o número de votos brancos, nulos e válidos. Calcular e escrever o percentual\n'+ 
+                '   que cada um representa em relação ao total de eleitores.\n'
+            );
             let eleitores = parseInt(prompt('1 - Qual o número de eleitores do município: '));
             let brancos = parseInt(prompt('2 - Número de votos brancos: '));
             let nulos = parseInt(prompt('3 - Número de votos nulos: '));
@@ -38,12 +42,14 @@ do{
             break;
         case '3': case '03':
             console.log("Exercicio 03:");
-            console.log('   Faça um algoritmo que leia quatro números inteiros e realize as seguintes operações:\n'+
-                        '       ● Some 25 ao primeiro inteiro;\n'+
-                        '       ● Triplique o valor do segundo inteiro;\n'+
-                        '       ● Modifique o valor do terceiro inteiro para 12% do valor original;\n'+
-                        '       ● Armazene no quarto inteiro a soma dos valores originais\n'+ 
-                        '           (os que o usuário digitou) dos primeiros três inteiros\n');
+            console.log(
+                '   Faça um algoritmo que leia quatro números inteiros e realize as seguintes operações:\n'+
+                '       ● Some 25 ao primeiro inteiro;\n'+
+                '       ● Triplique o valor do segundo inteiro;\n'+
+                '       ● Modifique o valor do terceiro inteiro para 12% do valor original;\n'+
+                '       ● Armazene no quarto inteiro a soma dos valores originais\n'+ 
+                '           (os que o usuário digitou) dos primeiros três inteiros\n'
+            );
             let num1 = parseInt(prompt('1 - Informe o primeiro número inteiro: '));
             let num2 = parseInt(prompt('2 - Informe o segundo número inteiro: '));
             let num3 = parseInt(prompt('3 - Informe o terceiro número inteiro: '));
@@ -61,9 +67,11 @@ do{
             break;
         case '4': case '04':
             console.log("Exercicio 04:");
-            console.log('   Escreva um algoritmo para ler as notas das duas avaliações de um aluno no semestre,\n'+
-                        '   calcular e escrever a média semestral e a seguinte mensagem: "PARABÉNS! Você foi aprovado",\n'+
-                        '   somente se o aluno foi aprovado (considere 6.0 a nota mínima para aprovação).\n');
+            console.log(
+                '   Escreva um algoritmo para ler as notas das duas avaliações de um aluno no semestre,\n'+
+                '   calcular e escrever a média semestral e a seguinte mensagem: "PARABÉNS! Você foi aprovado",\n'+
+                '   somente se o aluno foi aprovado (considere 6.0 a nota mínima para aprovação).\n'
+            );
             let notaUM4 = Number(prompt('1 - Informe a primeira nota(0.0 a 10.0): '));
             let notaDOIS4 = Number(prompt('2 - Informe a segunda nota(0.0 a 10.0): '));
             let media4;
@@ -114,8 +122,16 @@ do{
             }    
             break;
         case '6': case '06':
-            console.log("Exercicio 06");
-            console.log();
+            console.log("Exercicio 06:");
+            console.log(
+                '   Ler três valores para os lados de um triângulo: A, B e C. Verificar se os lados fornecidos\n'+
+                '   formam realmente um triângulo. Caso forme, deve ser indicado o tipo de triângulo:\n'+
+                '   Isósceles, escaleno ou eqüilátero.\n'+
+                '   Para verificar se os lados fornecidos formam triângulo: A < B + C e B < A + C e C < A + B\n'+
+                '   Triângulo isósceles: possui dois lados iguais (A=B ou A=C ou B = C)\n'+
+                '   Triângulo escaleno: possui todos os lados diferentes (A<>B e B <> C)\n'+
+                '   Triângulo eqüilátero: possui todos os lados iguais (A=B e B=C)\n'
+            );
             let ladoA = Number(prompt('1 - Informe o valor do lado A: '));
             let ladoB = Number(prompt('2 - Informe o valor do lado B: '));
             let ladoC = Number(prompt('3 - Informe o valor do lado C: '));
@@ -135,7 +151,11 @@ do{
             break;
         case '7': case '07':
             console.log("Exercicio 07");
-            console.log();
+            console.log(
+                '   As maçãs custam R$ 0,30 se forem compradas menos do que uma dúzia, e R$ 0,25 se\n'+
+                '   forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maçãs\n'+
+                '   compradas, calcule e escreva o valor total da compra.\n'
+            );
             let qtd = parseInt(prompt('1 - Informe a quantidade de maças compradas: '));
             console.log(qtd)
             let total7;
@@ -151,8 +171,11 @@ do{
             }    
             break;
         case '8': case '08':
-            console.log("Exercicio 08");
-            console.log();
+            console.log("Exercicio 08:");
+            console.log(
+                '   Escreva um algoritmo para ler 2 valores (considere que não serão lidos valores iguais)\n'+
+                '   e escreve-los em ordem crescente.\n'
+            );
             console.log('Informe dois valores diferentes.');
             let valor1 = Number(prompt('1 - Informe o primeiro valor: '));
             let valor2 = Number(prompt('2 - Informe o segundo valor: '));
@@ -168,8 +191,14 @@ do{
             }    
             break;
         case '9': case '09':
-            console.log("Exercicio 09");
-            console.log();
+            console.log("Exercicio 09:");
+            console.log(
+                '   Escreva um algoritmo que leia o código de origem de um produto e imprima a região\n'+
+                '   do mesmo, conforme a tabela abaixo:\n'+
+                '   1 - sul * 2 - norte * 3 - leste * 4 - oeste * 5 ou 6 - nordeste\n'+
+                '   7, 8 ou 9 - sudeste * 10 até 20 - centro-oeste * 25 até 50 - nordeste\n'+
+                '   outros - Produto importado\n'
+            );
             let cod = parseInt(prompt('1 - Informe o código de origem do produto: '));
             switch(true){
                 case (cod == 1):
@@ -202,8 +231,10 @@ do{
             }    
             break;
         case '10':
-            console.log("Exercicio 10");
-            console.log();
+            console.log("Exercicio 10:");
+            console.log(
+                '   Escreva um algoritmo para ler um número inteiro e escrevê-lo na tela 10 vezes.\n'
+            );
             let valor10 = parseInt(prompt('1 - Informe um valor: '));
 
             for(let i = 1; i <= 10; i++){
@@ -211,8 +242,12 @@ do{
             }    
             break;
         case '11':
-            console.log("Exercicio 11");
-            console.log();
+            console.log("Exercicio 11:");
+            console.log(
+                '   Escreva um algoritmo para ler uma quantidade indeterminada de valores inteiros.\n'+
+                '   Para cada valor fornecido escrever uma mensagem que indica se cada valor fornecido é PAR ou ÍMPAR.\n'+
+                '   O algoritmo será encerrado imediatamente após a leitura de um valor NULO ou NEGATIVO\n'
+            );
             let valor11;
             do{
                 valor11 = Number(prompt('Informe um número inteiro: ')); 
@@ -226,8 +261,11 @@ do{
             } while ((valor11 >= 1) )    
             break;
         case '12':
-            console.log("Exercicio 12");
-            console.log();
+            console.log("Exercicio 12:");
+            console.log(
+                '   Escreva um algoritmo que gere os números de 1000 a 1999 e escreva aqueles que,\n'+
+                '   divididos por 11, dão resto igual a 5.\n'
+            );
             for (let i = 1000; i < 2000; i++){
                 if(i%11 === 5){
                     console.log(i);
@@ -235,8 +273,14 @@ do{
             }    
             break;
         case '13':  
-            console.log("Exercicio 13");
-            console.log();
+            console.log("Exercicio 13:");
+            console.log(
+                '   Escrever um algoritmo que leia 5 valores para uma variável N e, para cada um deles,\n'+
+                '   calcule e mostre a tabuada de 1 até N. Mostre a tabuada na forma:\n'+
+                '   1 x N = N\n'+
+                '   2 x N = 2N\n'+
+                '   3 x N = 3N\n'
+            );
             for (let i = 1; i <= 5; i++){
                 let n = parseInt(prompt(`Informe o ${i}º N: `));
                 for (let j = 1; j <= n; j++){
@@ -245,8 +289,12 @@ do{
             }    
             break;
         case '14':
-            console.log("Exercicio 14");
-            console.log();
+            console.log("Exercicio 14:");
+            console.log(
+                '   Utilizar somente while\n'+
+                '   Fazer um algoritmo para receber números decimais até que o usuário digite 0 e fazer\n'+
+                '   a média aritmética desses números.\n'
+            );
             let num14;
             let cont14 = -1;
             let total14 = 0;
@@ -264,8 +312,13 @@ do{
             console.log('Média aritmética:', total14/cont14);    
             break;
         case '15':
-            console.log("Exercicio 15");
-            console.log();
+            console.log("Exercicio 15:");
+            console.log(
+                '   Utilizar somente while\n'+
+                '   Fazer um algoritmos para receber um número decimal e o peso de cada número até que o usuário\n'+
+                '   digite o número 0. Fazer a média ponderada desses números e pesos respectivos.\n'+
+                '   (n1 + n2 + n3 + nN)/(p1 + p2 + p3 + pN)\n'
+            );
             let num15;
             let peso15;
             let totalNum15 = 0;
@@ -289,8 +342,12 @@ do{
             console.log('Média Ponderada:', totalNum/totalPeso);    
             break;
         case '16':
-            console.log("Exercicio 16");
-            console.log();
+            console.log("Exercicio 16:");
+            console.log(
+                'Utilizar somente while\n'+
+                'Escreva um algoritmo para imprimir os 50 primeiros número primos maior que 100.\n'+
+                'Obs.: Número primo é aquele divisível somente por 1 e ele mesmo.\n'
+            );
             let num = 100;
             let count = 0;
 
@@ -315,6 +372,7 @@ do{
             }    
             break;
     }
+    
     let teste = true;
     let contTeste = 0;
     while (teste){
