@@ -1,4 +1,4 @@
-<img src=img.jpg>
+<img src=Arquivos/img.jpg>
 
 ## Sobre:
 Lista de exercícios referentes a Formação Desenvolvedor Full Stack Júnior.

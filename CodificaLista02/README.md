@@ -1,6 +1,6 @@
 <img src='Arquivos/logoCodifica.jpg'>
 <h1> 
-    Lista de Exercícios 01
+    Lista de Exercícios 02
 </h1>
 
 ### Sobre:
