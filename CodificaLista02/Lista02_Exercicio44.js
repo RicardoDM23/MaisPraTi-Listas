@@ -3,7 +3,7 @@
     objeto e retorne esse número.
 */
 
-// Ricardo D. Muenchen /05/2024
+// Ricardo D. Muenchen 21/05/2024
 
 const objeto = {
     nome: 'Ricardo',
