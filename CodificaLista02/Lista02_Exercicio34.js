@@ -8,9 +8,9 @@
 
 function multiplica(mat){
     for(let i = 0; i<mat.length; i++){
-        let valor = mat[i][i]
+        let valor       = mat[i][i]
         for(let j = 0; j<mat[i].length; j++){
-            mat[i][j] = mat[i][j] * valor
+            mat[i][j]   = mat[i][j] * valor
         }
     }
     return mat
@@ -24,14 +24,12 @@ const m = Array.from({ length: 50 }, () =>
     Array.from({ length: 50 }, () => rand(1, 10))
 )
 
-
 console.log('\nOriginal')
 for(let i = 0; i < m.length; i++){
     console.log(`${m[i]}`)
 }
 
-let mMult = multiplica(m)
-
+let mMult   = multiplica(m)
 console.log('\n\nMultiplicada')
 for(let i = 0; i < mMult.length; i++){
     console.log(`${mMult[i]}`)

@@ -7,7 +7,7 @@
 // Ricardo D. Muenchen 10/05/2024
 
 function produtoMat(matA, matB){
-    let matC = [
+    let matC    = [
         [0,0,0],
         [0,0,0],
         [0,0,0],
@@ -21,14 +21,14 @@ function produtoMat(matA, matB){
             matC[i] = new Array(colunaB).fill(0);
         }
     */
-    const linhaA = matA.length //5
-    const colunaA = matA[0].length //3
-    const colunaB = matB[0].length //3
+    const linhaA    = matA.length //5
+    const colunaA   = matA[0].length //3
+    const colunaB   = matB[0].length //3
     
     for (let i = 0; i < linhaA; i++) {
         for (let j = 0; j < colunaB; j++) {
             for (let k = 0; k < colunaA; k++) {
-                matC[i][j] += matA[i][k] * matB[k][j]
+                matC[i][j]  += matA[i][k] * matB[k][j]
             }
         }
     }
@@ -36,7 +36,7 @@ function produtoMat(matA, matB){
     return matC
 }
 
-let A = [
+let A   = [
     [1,2,3],
     [2,6,7],
     [7,3,8],
@@ -44,7 +44,7 @@ let A = [
     [8,2,5]
 ]
 
-let B = [
+let B   = [
     [5,3,7],
     [7,2,7],
     [3,4,6],
@@ -52,5 +52,5 @@ let B = [
     [9,3,5]
 ]
 
-let C = produtoMat(A, B)
+let C   = produtoMat(A, B)
 console.log(C)

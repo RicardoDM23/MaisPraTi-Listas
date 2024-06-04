@@ -7,11 +7,11 @@
 
 //  Ricardo D. Muenchen 04/05/2024
 
-const prompt = require('prompt-sync')();
+const prompt    = require('prompt-sync')();
 
-let a = Number(prompt('1 - Informe o tamanho do primeiro segmento de reta: '));
-let b = Number(prompt('2 - Informe o tamanho do segundo segmento de reta: '));
-let c = Number(prompt('3 - Informe o tamanho do terceiro segmento de reta: '));
+let a   = Number(prompt('1 - Informe o tamanho do primeiro segmento de reta: '));
+let b   = Number(prompt('2 - Informe o tamanho do segundo segmento de reta: '));
+let c   = Number(prompt('3 - Informe o tamanho do terceiro segmento de reta: '));
 
 if ((a < b + c) && (b < a + c) && (c < a + b)){
     console.log("É possivel formar um triângulo com os segmentos!")

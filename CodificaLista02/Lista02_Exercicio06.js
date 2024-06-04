@@ -5,24 +5,23 @@
 
 //  Ricardo D. Muenchen 04/05/2024
 
-const prompt = require('prompt-sync')();
+const prompt    = require('prompt-sync')();
+let attempt     = [];
+let drawnValue  = Math.floor((Math.random() * 5) + 1)
+let first       = true
+let proceed     = true
 
-let tentativa = [];
-let valorSorteado = Math.floor((Math.random() * 5) + 1)
-let primeira = true
-let continuar = true
-
-while(continuar){
-    if (primeira == false){
-        console.log('Valores tentados: '+ tentativa)
+while(proceed){
+    if (first == false){
+        console.log('Valores tentados: '+ attempt)
     }
-    let valorTentativa = parseInt(prompt('1 - Qual foi o valor sorteado? '))
-    if(valorSorteado == valorTentativa){
+    let attemptValue    = parseInt(prompt('1 - Qual foi o valor sorteado? '))
+    if(drawnValue == attemptValue){
         console.log('Parabéns! Você acertou o número.')
-        continuar = false
+        proceed = false
     } else {
         console.log('Número incorreto!')
-        primeira = false
-        tentativa.push(valorTentativa)
+        first   = false
+        attempt.push(attemptValue)
     }
 }

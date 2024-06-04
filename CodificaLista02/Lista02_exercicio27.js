@@ -6,17 +6,17 @@
 
 // Ricardo D. Muenchen 10/05/2024
 
-const prompt = require('prompt-sync')()
+const prompt    = require('prompt-sync')()
+let M   = new Array(6);
+let V   = []
 
-let M = new Array(6);
-let V = []
 for (let i = 0; i < 6; i++) {
-    M[i] = new Array(6).fill(0);
+    M[i]    = new Array(6).fill(0);
 }
 
 for(let i = 0; i < 6; i++){
     for(let j = 0; j < 6; j++){
-        let valor = Number(prompt('Informe o valor da matriz['+(i+1)+']['+(j+1)+']: '))
+        let valor   = Number(prompt('Informe o valor da matriz['+(i+1)+']['+(j+1)+']: '))
         if(isNaN(valor)){
             console.log('Valor informado não é um numero!')
             break
@@ -33,7 +33,7 @@ if(isNaN(valorA)){
 } else {
     for(let i = 0; i < M.length; i++){
         for (let j = 0; j < M[i].length; j++){
-            let valorM = M[i][j] * valorA
+            let valorM  = M[i][j] * valorA
             V.push(valorM)
         }
     }

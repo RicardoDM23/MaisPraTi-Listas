@@ -6,11 +6,11 @@
 
 // Ricardo D. Muenchen 07/05/2024
 
-let vetor = []
-let ordenado = []
+let vetor       = []
+let ordenado    = []
 
 for (let i = 0; i<20; i++){
-    let rand = Math.floor(Math.random() * 100)
+    let rand    = Math.floor(Math.random() * 100)
     vetor.push(rand)
 }
 
@@ -20,9 +20,9 @@ for (let i = 0; i<= vetor.length; i++){
     for (let j = 0; j< vetor.length - 1; j++){
         let aux = null
         if (vetor[j] > vetor[j+1]){
-            aux = vetor[j]
-            vetor[j] = vetor[j+1]
-            vetor[j+1] = aux
+            aux         = vetor[j]
+            vetor[j]    = vetor[j+1]
+            vetor[j+1]  = aux
         }
     }
 }

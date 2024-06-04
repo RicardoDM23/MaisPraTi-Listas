@@ -6,18 +6,18 @@
 
 // Ricardo D. Muenchen 10/05/2024
 
-const prompt = require('prompt-sync')()
+const prompt    = require('prompt-sync')()
 
 let M = new Array(5);
 for (let i = 0; i < 5; i++) {
-    M[i] = new Array(5).fill(0);
+    M[i]    = new Array(5).fill(0);
 }
-let SL = []
-let SC = []
+let SL  = []
+let SC  = []
 //console.log(M)
 for(let i = 0; i < 5; i++){
     for(let j = 0; j < 5; j++){
-        let valor = Number(prompt('Informe o valor da matriz['+(i+1)+']['+(j+1)+']: '))
+        let valor   = Number(prompt('Informe o valor da matriz['+(i+1)+']['+(j+1)+']: '))
         if(isNaN(valor)){
             console.log('Valor informado não é um numero!')
             break
@@ -28,16 +28,16 @@ for(let i = 0; i < 5; i++){
 }
 //console.log(M)
 for(let i = 0; i < M.length; i++){
-    let somaL = 0
+    let somaL   = 0
     for(let j = 0; j < M[i].length; j++){
-        somaL += M[i][j]
+        somaL   += M[i][j]
     }
     SL.push(somaL)
 }
 for(let j = 0; j < M[0].length; j++){
-    let somaC = 0
+    let somaC   = 0
     for(let i = 0; i < M.length; i++){
-        somaC += M[i][j]
+        somaC   += M[i][j]
     }
     SC.push(somaC)
 }

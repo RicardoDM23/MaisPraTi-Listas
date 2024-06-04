@@ -8,10 +8,11 @@
 // Ricardo D. Muenchen 28/05/2024
 
 function agrupar(obj){
-    const resultado = {};
+    const resultado = {}
 
     for (let i = 0; i < obj.length; i++) {
-        const transacao = obj[i];
+        const transacao = obj[i]
+
         let cat = transacao.categoria
         let val = transacao.valor
 
@@ -22,11 +23,11 @@ function agrupar(obj){
             };
         }
   
-      resultado[cat].transacoes.push(transacao);
-      resultado[cat].subtotal += val;
+      resultado[cat].transacoes.push(transacao)
+      resultado[cat].subtotal   += val
     }
   
-    return resultado;
+    return resultado
 }
 
 const lista = [
@@ -37,7 +38,7 @@ const lista = [
     {id: 5, valor: 246, data: '01/05/2024', categoria: 'C'}
 ]
 
-let result = agrupar(lista)
+let result  = agrupar(lista)
 console.log(result)
 
 for(let chave in result){

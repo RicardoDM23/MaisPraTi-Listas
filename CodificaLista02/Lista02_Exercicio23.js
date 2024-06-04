@@ -5,10 +5,10 @@
 
 // Ricardo D. Muenchen 09/05/2024
 
-let matriz = []
+let matriz  = []
 
 for(let i = 0 ; i <= 6; i++){
-    matriz[i] = []
+    matriz[i]   = []
     for (let j = 0; j <= 6; j++){
         if(i==j){
             matriz[i][j] = 1

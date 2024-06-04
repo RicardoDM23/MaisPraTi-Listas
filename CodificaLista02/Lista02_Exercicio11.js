@@ -12,28 +12,27 @@
 
 // Ricardo D. Muenchen 06/05/2024
 
-const prompt = require('prompt-sync')()
-
-let a = Number(prompt('Informe o Prímeiro termo: '))
-let r = Number(prompt('Informe a Razão: '))
+const prompt    = require('prompt-sync')()
+let a   = Number(prompt('Informe o Prímeiro termo: '))
+let r   = Number(prompt('Informe a Razão: '))
 //let n = 10
 let valores = []
-let soma = 0
-let verifica = true
+let soma    = 0
+let verifica    = true
 
 if(isNaN(a)){
     console.log('Prímeiro termo informado não é um número!')
-    verifica = false
+    verifica    = false
 }else if (isNaN(r)){
     console.log('Razão informada não é um número!')
-    verifica = false
+    verifica    = false
 }
 
 if (verifica){
     for (let i = 1; i <= 10; i++){
-        resultado = a+(i-1)*r
+        resultado   = a+(i-1)*r
         valores.push(resultado)
-        soma = 10/a*(a + (a+(10-1)*r)) // ou soma += resultado
+        soma    = 10/a*(a + (a+(10-1)*r)) // ou soma += resultado
     }
     
     console.log('Elementos da PA: ' + valores)

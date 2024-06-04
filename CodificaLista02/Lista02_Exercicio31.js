@@ -6,19 +6,17 @@
 
 //  Ricardo D. Muenchen 13/05/2024
 
-const prompt = require('prompt-sync')()
+const prompt    = require('prompt-sync')()
 
 function rand(min, max) {
     return Math.floor(Math.random() * max) //(max - min) + min
 }
-
 const V = Array.from({ length: 30 }, () => 
     Array.from({ length: 30 }, () => rand(1, 10))
 )
 
-let A = parseInt(prompt('Informe um valor A de 0 a 9: '))
-
-let vetorValores = []
+let A               = parseInt(prompt('Informe um valor A de 0 a 9: '))
+let vetorValores    = []
 
 if(isNaN(A)){
     console.log('A não é um numero!')
@@ -30,11 +28,11 @@ if(isNaN(A)){
             }
         }
     }
-    let M = []
-    let contTotal = vetorValores.length
-    let cont = 1
+    let M           = []
+    let contTotal   = vetorValores.length
+    let cont        = 1
     for(let i = 0; i < 30; i++){
-        M[i] = []
+        M[i]        = []
         for(let j = 0; j < 30; j++){
             if(cont <= contTotal){
                 M[i][j] = vetorValores[cont]

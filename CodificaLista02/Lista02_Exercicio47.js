@@ -16,14 +16,14 @@ function transforma(objeto){
 function funcaoMod(x){
 
     if(isNaN(x)){
-        x+=' FunçãoMod'
+        x   += ' FunçãoMod'
     } else {
-        x += 1000
+        x   += 1000
     }
     return x
 }
 
-const obj = {
+const obj   = {
     nome: 'Ricardo',
     idade: 32,
     end: 'asdasdasd',
@@ -31,7 +31,7 @@ const obj = {
     info2: '23asde'
 }
 
-let obj2 = transforma(obj)
+let obj2    = transforma(obj)
 
 console.log(obj)
 console.log(obj2)

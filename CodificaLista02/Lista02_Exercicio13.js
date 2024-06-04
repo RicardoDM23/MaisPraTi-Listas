@@ -7,10 +7,10 @@
 // Ricardo D. Muenchen 06/05/2024
 
 function fibonacci(){
-    let primeiro = true
-    let val = 1
-    let ant = 0
-    let vetor = []
+    let primeiro    = true
+    let val     = 1
+    let ant     = 0
+    let vetor   = []
     for (let i = 1; i<= 15; i++){
         if(primeiro){
             primeiro = false
@@ -26,6 +26,6 @@ function fibonacci(){
     return vetor
 }
 
-let resultado = fibonacci()
+let resultado   = fibonacci()
 
 console.log(resultado)

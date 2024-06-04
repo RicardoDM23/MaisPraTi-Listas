@@ -8,31 +8,29 @@
 
 // Ricardo D. Muenchen 18/05/2024
 
-const prompt = require('prompt-sync')()
-
-let G = []
+const prompt    = require('prompt-sync')()
+let G           = []
 
 for(let i = 1; i<=20; i++){
-    let resp = prompt(`Informe o gabarito da questão ${i}: `)
+    let resp    = prompt(`Informe o gabarito da questão ${i}: `)
     G.push(resp)
 }
 
-let numAlunos = parseInt(prompt('Infome o numero de alunos (1 a 50): '))
+let numAlunos   = parseInt(prompt('Infome o numero de alunos (1 a 50): '))
 if(numAlunos < 1){
-    numAlunos = 1
+    numAlunos   = 1
 }else if(numAlunos > 50){
-    numAlunos = 50
+    numAlunos   = 50
 }else{
-    numAlunos = 2
+    numAlunos   = 2
 }
-
-let resultado = []
+let resultado   = []
 
 for(let i = 1; i<= numAlunos; i++){
     let acertos = 0
-    let sit = ''
+    let sit     = ''
     for (let j = 0; j<=G.length-1; j++){
-        let resposta = prompt(`Aluno ${i} / Questão ${j+1}: `)
+        let resposta    = prompt(`Aluno ${i} / Questão ${j+1}: `)
         if (resposta.toLowerCase() == G[j].toLowerCase()){
             acertos++
         }

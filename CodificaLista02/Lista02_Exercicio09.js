@@ -7,16 +7,14 @@
 
 // Ricardo D. Muenchen 06/05/2024
 
-const prompt = require('prompt-sync')();
-
-
-let salarioFM = []
-let salarioFF = []
-let seguir = true
+const prompt    = require('prompt-sync')();
+let salarioFM   = []
+let salarioFF   = []
+let seguir      = true
 
 
 function continuar(){
-    let verifica = prompt('Deseja continuar (s / n) ? ')
+    let verifica    = prompt('Deseja continuar (s / n) ? ')
     if (verifica.toLowerCase() == 's'){
         return true
     } else {
@@ -25,16 +23,16 @@ function continuar(){
 }
 
 function somar(vetor){
-    let soma = 0;
+    let soma    = 0;
     for (let i = 0; i < vetor.length; i++){
-        soma += vetor[i];
+        soma    += vetor[i];
     }
     return soma;
 }
 
 while(seguir){
     let salario = Number(prompt('Informe o salario do funcionario: '))
-    let sexo = prompt('Informe o sexo do funcinario usando "f" para feminino e "m" para masculino: ')
+    let sexo    = prompt('Informe o sexo do funcinario usando "f" para feminino e "m" para masculino: ')
     if ((sexo.toLowerCase() != 'm') && (sexo.toLowerCase() != 'f')){
         console.log('Sexo informado incorreto.')
     } else if (sexo.toLowerCase() == 'm'){
@@ -45,8 +43,8 @@ while(seguir){
     seguir = continuar()
 }
 
-let totalSFM = somar(salarioFM)
-let totalSFF = somar(salarioFF)
+let totalSFM    = somar(salarioFM)
+let totalSFF    = somar(salarioFF)
 
 console.log('Total de salário pago aos homens: ' + totalSFM.toFixed(2))
 console.log('Total de salário pago às mulheres: '+ totalSFF.toFixed(2))

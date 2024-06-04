@@ -6,7 +6,7 @@
 
 // Ricardo D. Muenchen 20/05/2024
 
-let pessoa = {
+let pessoa  = {
     nome: 'Ricardo',
     idade: 32
 }
@@ -15,6 +15,6 @@ console.log(`Idade: ${pessoa.idade}`)
 
 console.log('Obejeto original:' )
 console.log(pessoa)
-pessoa.email = 'pessoa@email.com'
+pessoa.email    = 'pessoa@email.com'
 console.log('Adicionado email:' )
 console.log(pessoa)

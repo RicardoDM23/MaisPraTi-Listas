@@ -5,28 +5,27 @@
 
 // Ricardo D. Muenchen 08/05/2024
 
-const prompt = require('prompt-sync')()
-let horarios = []
-let cont = 0
+const prompt    = require('prompt-sync')()
+let horarios    = []
+let cont        = 0
 
 function validaHorario(a){
- const regex = /^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/  //expressões regulares
+ const regex    = /^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/  //expressões regulares
  return regex.test(a)
 }
 
 for(let i = 1; i <= 5; i++){
     
-    let horario= prompt('Informe o '+i+'º horário no formato (HH:MM:SS): ')
+    let horario = prompt('Informe o '+i+'º horário no formato (HH:MM:SS): ')
     if(validaHorario(horario)){
         horarios.push(horario)
     } else {
         cont++
         console.log('Formato incorreto! '+cont+'º Erro.')
         i--
-        
     }
     if ( cont === 3){
-        i=5
+        i = 5
     }
 }
 

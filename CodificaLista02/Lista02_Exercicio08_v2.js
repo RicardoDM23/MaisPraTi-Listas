@@ -10,25 +10,25 @@
         Calcule e mostre quantos pontos ela teve e quanto dinheiro ela conseguiu ganhar.
 */
 
-let listaPH = [
-    {pessoa:'Joao', horas: 3},
-    {pessoa:'Ana', horas: 13},
-    {pessoa:'Pedro' , horas: 19},
-    {pessoa:'Maria', horas: 22},
-    {pessoa:'Paulo', horas: 9},
-    {pessoa:'Jose', horas: 30},
+let listPH = [
+    {person:'Joao',     hours: 3},
+    {person:'Ana',      hours: 13},
+    {person:'Pedro',    hours: 19},
+    {person:'Maria',    hours: 22},
+    {person:'Paulo',    hours: 9},
+    {person:'Jose',     hours: 30},
 ]
 
-for (let pessoa of listaPH){
-    let pontos
-    let valor
-    if (pessoa.horas < 10){
-        pontos = pessoa.horas * 2
-    }else if (pessoa.horas >= 10 && pessoa.horas < 20){
-        pontos = pessoa.horas * 5
-    }else if (pessoa.horas >= 20){
-        pontos = pessoa.horas * 10
+for (let person of listPH){
+    let points
+    let val
+    if (person.hours < 10){
+        points  = person.hours * 2
+    }else if (person.hours >= 10 && person.hours < 20){
+        points  = person.hours * 5
+    }else if (person.hours >= 20){
+        points  = person.hours * 10
     }
-    valor = pontos * 0.05
-    console.log(pessoa.pessoa + ' -> Pontos: ' + pontos + ' / Valor recebido: R$ ' + valor.toFixed(2))
+    val = points * 0.05
+    console.log(person.person + ' -> Pontos: ' + points + ' / Valor recebido: R$ ' + val.toFixed(2))
 }

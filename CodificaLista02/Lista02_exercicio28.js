@@ -13,19 +13,19 @@ function rand(min, max) {
 const M = Array.from({ length: 10 }, () => 
     Array.from({ length: 10 }, () => rand(1, 10))
 )
-let a = 0
-let vetA =[]
-let b = 0
-let vetB =[]
+let a       = 0
+let vetA    =[]
+let b       = 0
+let vetB    =[]
 
 for(let i=0; i<M.length; i++){
     for(let j=0; j<M[i].length; j++){
         if((i == j)&&(i != 0)&&(i != M.length)){
-            a += M[i-1][j]
+            a   += M[i-1][j]
             vetA.push(M[i-1][j])
         }
         if((i == j)&&(i != M.length-1)){
-            b += M[i+1][j]
+            b   += M[i+1][j]
             vetB.push(M[i+1][j])
         }
     }

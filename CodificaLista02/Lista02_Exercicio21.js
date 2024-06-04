@@ -6,20 +6,20 @@
 
 // Ricardo D. Muenchen 09/05/2024
 
-const prompt = require('prompt-sync')()
+const prompt    = require('prompt-sync')()
 
-let alt = Number(prompt('Informe a altura (Usar . exp: 1.75): '))
-let sexo = prompt('Homen ou Mulher? (H/M) ')
-let pesoIdeal = null
+let alt         = Number(prompt('Informe a altura (Usar . exp: 1.75): '))
+let sexo        = prompt('Homen ou Mulher? (H/M) ')
+let pesoIdeal   = null
 
 if ((isNaN(alt)) || (alt <= 0)){
     console.log('Altura informada não é um numero valido!')
 } else if ((sexo.toLowerCase() !== 'h') && (sexo.toLowerCase() !== 'm')){
     console.log('Sexo informado não encontrado.')
 } else if (sexo.toLowerCase() === 'h'){
-    pesoIdeal = (72.7 * alt) - 58
+    pesoIdeal   = (72.7 * alt) - 58
 } else if (sexo.toLowerCase() === 'm'){
-    pesoIdeal = (62.1 * alt) - 44.7
+    pesoIdeal   = (62.1 * alt) - 44.7
 }
 
 if (pesoIdeal !== null){

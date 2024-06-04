@@ -13,19 +13,19 @@ function rand(min, max) {
 const M = Array.from({ length: 12 }, () => 
     Array.from({ length: 13 }, () => rand(1, 10))
 )
-let Mmod = []
+let Mmod    = []
 for(let i = 0; i < M.length; i++){
-    Mmod[i] = []
-    let maior = 0
+    Mmod[i]     = []
+    let maior   = 0
     for(let j = 0; j < M[i].length; j++){
-        let valor = Math.abs(M[i][j])
+        let valor   = Math.abs(M[i][j])
         if (valor>= maior){
-            maior = Math.abs(M[i][j])
+            maior   = Math.abs(M[i][j])
         }
 
     }
     for(let j = 0; j < M[i].length; j++){
-        Mmod[i][j] = (M[i][j]/maior).toFixed(2)
+        Mmod[i][j]  = (M[i][j]/maior).toFixed(2)
         //Mmod[i][j] = (M[i][j])/maior
     }
 }

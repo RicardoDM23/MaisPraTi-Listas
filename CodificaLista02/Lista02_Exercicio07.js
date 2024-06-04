@@ -14,37 +14,37 @@
 
 // Ricardo D. Muenchen 04/05/2024
 
-const prompt = require('prompt-sync')();
+const prompt    = require('prompt-sync')();
 
-let tipoCarro = prompt('1 - Qual tipo de carro(usar para popular: p/P/1 e para luxo: l/L/2): ')
-let dias = parseInt(prompt('2 - Quantos dias de aluguem? '))
-let km = Number(prompt('3 - KM percorridos (usar . se necessário): '))
+let carType = prompt('1 - Qual tipo de carro(usar para popular: p/P/1 e para luxo: l/L/2): ')
+let days    = parseInt(prompt('2 - Quantos dias de aluguem? '))
+let km      = Number(prompt('3 - KM percorridos (usar . se necessário): '))
 
-let valorKm = 0
-let valorAluguel = 0
-let valorTotal = 0
-if ((tipoCarro.toLowerCase() === 'p') || (tipoCarro.toLowerCase() === '1')){
+let valKm       = 0
+let valRent     = 0
+let valTotal    = 0
+if ((carType.toLowerCase() === 'p') || (carType.toLowerCase() === '1')){
     if(km <= 100){
-        valorKm = km * 0.2  
+        valKm   = km * 0.2  
     }else{
-        valorKm = km * 0.1
+        valKm   = km * 0.1
     }
-    valorAluguel = dias * 90.00
-} else if ((tipoCarro.toLowerCase() === 'l') || (tipoCarro.toLowerCase() === '2')){
+    valRent     = days * 90.00
+} else if ((carType.toLowerCase() === 'l') || (carType.toLowerCase() === '2')){
     if(km <= 200){
-        valorKm = km * 0.3
+        valKm   = km * 0.3
     }else{
-        valorKm = km * 0.25
+        valKm   = km * 0.25
     }
-    valorAluguel = dias * 150.00
+    valRent     = days * 150.00
 } else {
     console.log('Tipo de carro não encontrado, tente novamente!')
-    valorTotal = null
+    valTotal    = null
 }
 
-if (valorTotal != null){
-    valorTotal = Number(valorKm.toFixed(2)) + Number(valorAluguel.toFixed(2))
-    console.log('Valor de aluguel: R$ ' + Number(valorAluguel.toFixed(2)))
-    console.log('Valor km: R$ ' + Number(valorKm.toFixed(2)))
-    console.log('Valor total a ser pago: R$ '+ valorTotal)
+if (valTotal != null){
+    valTotal    = Number(valKm.toFixed(2)) + Number(valRent.toFixed(2))
+    console.log('Valor de aluguel: R$ ' + Number(valRent.toFixed(2)))
+    console.log('Valor km: R$ ' + Number(valKm.toFixed(2)))
+    console.log('Valor total a ser pago: R$ '+ valTotal)
 }

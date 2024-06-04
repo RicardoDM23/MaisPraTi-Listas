@@ -12,17 +12,17 @@
 
 // Ricardo D. Muenchen 04/05/2024
 
-const prompt = require('prompt-sync')();
+const prompt    = require('prompt-sync')();
 
-let horas = parseInt(prompt('1 - Informe a número de horas: '))
-let pontos = 0
+let hours   = parseInt(prompt('1 - Informe a número de horas: '))
+let points  = 0
 
-if (horas < 10){
-    pontos = horas * 2
-}else if (horas >= 10 && horas < 20){
-    pontos = horas * 5
-}else if (horas >= 20){
-    pontos = horas * 10
+if (hours < 10){
+    points  = hours * 2
+}else if (hours >= 10 && hours < 20){
+    points  = hours * 5
+}else if (hours >= 20){
+    points  = hours * 10
 }
-let valor = pontos * 0.05
-console.log('Quantidade de pontos: '+pontos+' Valor total ganho: R$ ' + valor.toFixed(2))
+let val   = points * 0.05
+console.log('Quantidade de pontos: '+points+' Valor total ganho: R$ ' + val.toFixed(2))

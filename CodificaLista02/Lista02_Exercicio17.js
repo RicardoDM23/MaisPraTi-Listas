@@ -6,13 +6,12 @@
 
 // Ricardo D. Muenchen 07/05/2024
 
-const prompt = require('prompt-sync')()
-let vetNome = []
-let vetIdade = []
+const prompt    = require('prompt-sync')()
+let vetNome     = []
+let vetIdade    = []
 for (let i = 0; i<=8; i++){
-
-    let nome = prompt('Informe o '+(i+1)+'º nome: ')
-    let idade = prompt('Informe a idade: ')
+    let nome    = prompt('Informe o '+(i+1)+'º nome: ')
+    let idade   = prompt('Informe a idade: ')
     vetNome.push(nome)
     vetIdade.push(idade)
 }

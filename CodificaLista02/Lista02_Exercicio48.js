@@ -12,22 +12,22 @@ function combina(obj1, obj2){
 
     obj1.forEach(obj1 => {
         if (resultado[obj1.item]){
-            resultado[obj1.item] += obj1.valor
+            resultado[obj1.item]    += obj1.valor
         }else{
-            resultado[obj1.item] = obj1.valor
+            resultado[obj1.item]    = obj1.valor
         }
     })
     obj2.forEach(obj2 => {
         if (resultado[obj2.item]){
-            resultado[obj2.item] += obj2.valor
+            resultado[obj2.item]    += obj2.valor
         }else{
-            resultado[obj2.item] = obj2.valor
+            resultado[obj2.item]    = obj2.valor
         }
     })
     return resultado
 }
 
-const inventarioLojaA = [
+const inventarioLojaA   = [
     {item: 'a', valor: 2},
     {item: 's', valor: 1},
     {item: 'd', valor: 4},
@@ -35,7 +35,7 @@ const inventarioLojaA = [
     {item: 'q', valor: 2}
 ]
 
-const inventarioLojaB = [
+const inventarioLojaB   = [
     {item: 'q', valor: 2},
     {item: 'w', valor: 1},
     {item: 'e', valor: 1},
@@ -43,6 +43,6 @@ const inventarioLojaB = [
     {item: 'a', valor: 1}
 ]
 
-let objCombinado = combina(inventarioLojaA, inventarioLojaB)
+let objCombinado    = combina(inventarioLojaA, inventarioLojaB)
 
 console.log(objCombinado)

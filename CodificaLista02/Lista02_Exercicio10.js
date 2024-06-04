@@ -6,13 +6,13 @@
         c) A média entre todos os valores;
         d) Quantos valores são pares.
 */
-const prompt = require('prompt-sync')();
-let verifica = true;
-let soma = 0
-let menor = null
-let media = 0
-let pares = 0
-let cont = 0
+const prompt    = require('prompt-sync')();
+let verifica    = true;
+let soma        = 0
+let menor       = null
+let media       = 0
+let pares       = 0
+let cont        = 0
 
 function continuar(){
     let a = prompt('Deseja continuar (s / n) ? ')
@@ -26,19 +26,19 @@ function continuar(){
 console.log('Use . para valores decimais. (ex: 10.5 ou 2004.52')
 do{
     
-    let valor = Number(prompt('Informe um valor: '))
+    let valor   = Number(prompt('Informe um valor: '))
     if (isNaN(valor)){
         console.log('Valor informado não é um número!')
-        verifica = continuar()
+        verifica    = continuar()
     } else {
-        soma += valor
+        soma    += valor
         cont++
-        media = soma/cont
+        media   = soma/cont
         if(valor%2 == 0){
-            pares += 1
+            pares   += 1
         }
         if (valor <= menor || menor == null){
-            menor = valor
+            menor   = valor
         }
     }
     verifica = continuar()

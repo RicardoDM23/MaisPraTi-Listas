@@ -9,11 +9,11 @@ function valorAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let vetorA = []
-let vetorB = []
+let vetorA  = []
+let vetorB  = []
 
 for(let i = 1; i<= 100; i++){
-    let valor = valorAleatorio(-10,10)
+    let valor   = valorAleatorio(-10,10)
     vetorA.push(valor)
 }
 

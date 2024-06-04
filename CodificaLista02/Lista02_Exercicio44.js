@@ -5,7 +5,7 @@
 
 // Ricardo D. Muenchen 21/05/2024
 
-const objeto = {
+const objeto    = {
     nome: 'Ricardo',
     valor: 123,
     endereco: 'M do Sol',
@@ -15,7 +15,7 @@ const objeto = {
     testeSt: ['a','b','c']
 }
 
-let cont = 0
+let cont    = 0
 for(let obj in objeto){
     if(typeof objeto[obj] === 'string'){
         cont++

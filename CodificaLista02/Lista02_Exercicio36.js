@@ -9,14 +9,14 @@
 
 // Ricardo D. Muenchen 18/05/2024
 
-const prompt = require('prompt-sync')()
-let vetGab = []
+const prompt    = require('prompt-sync')()
+let vetGab      = []
 for(let i = 1; i<=13; i++){
-    let erro = false
-    let valor = parseInt(prompt(`Informe o ${i}º valor do gabarito: `))
+    let erro    = false
+    let valor   = parseInt(prompt(`Informe o ${i}º valor do gabarito: `))
     for(let k = 0; k<=vetGab.length; k++){
         if(valor == vetGab[k]){
-            erro = true
+            erro    = true
         }
     }
     if(isNaN(valor)){
@@ -30,26 +30,26 @@ for(let i = 1; i<=13; i++){
     }
 }
 
-let respostas = []
-let quantidade = 0
-let qtdParti = parseInt(prompt('Quantidade de participantes(1 a 100): '))
+let respostas   = []
+let quantidade  = 0
+let qtdParti    = parseInt(prompt('Quantidade de participantes(1 a 100): '))
 if (qtdParti < 1){
-    qtdParti = 1
+    qtdParti    = 1
 }else if (qtdParti >100){
-    qtdParti = 100
+    qtdParti    = 100
 }
 
 for(let i = 1; qtdParti <=2; i++){
-    let cont = 0
-    let qtdAcertos = 0
-    let cartResp = []
-    let numCartao = parseInt(prompt(`Numero do cartao: `))
+    let cont        = 0
+    let qtdAcertos  = 0
+    let cartResp    = []
+    let numCartao   = parseInt(prompt(`Numero do cartao: `))
     for(let j = 1; j <=13; j++){
-        let erro = false
-        let valor = parseInt(prompt(`Informe o ${j}º valor do cartao resposta: `))
+        let erro    = false
+        let valor   = parseInt(prompt(`Informe o ${j}º valor do cartao resposta: `))
         for(let k = 0; k<=cartResp.length; k++){
             if(valor == cartResp[k]){
-                erro = true
+                erro    = true
             }
         }
         if(isNaN(valor)){
@@ -74,7 +74,7 @@ for(let i = 1; qtdParti <=2; i++){
     if(cont ==3){
         break
     }
-    let infos = {
+    let infos   = {
         numero: numCartao,
         vetResp: cartResp,
         arcertos: qtdAcertos

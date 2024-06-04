@@ -15,9 +15,9 @@
 // npm install xlsx
 // Ricardo D. Muenchen 08/05/2024
 
-const XLSX = require('xlsx');
-const workbook = XLSX.readFile('CodificaLista02/exe20GPT.xlsx');
-const sheet_name_list = workbook.SheetNames;
-const data = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+const XLSX              = require('xlsx');
+const workbook          = XLSX.readFile('CodificaLista02/exe20GPT.xlsx');
+const sheet_name_list   = workbook.SheetNames;
+const data              = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 
 console.log(data);

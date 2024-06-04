@@ -6,7 +6,7 @@
 // Ricardo D. Muenchen 21/05/2024
 
 function logico(array) {
-    const result = {}
+    const result    = {}
     array.forEach(x => {
         if (result[x]) {
             result[x]++
@@ -19,6 +19,6 @@ function logico(array) {
 
 const arrayStrings = ['a','s','d','z','x','c','z','s','a','d','c']
 
-let objeto = logico(arrayStrings)
+let objeto  = logico(arrayStrings)
 console.log(objeto)
 

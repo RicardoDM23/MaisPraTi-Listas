@@ -7,12 +7,12 @@
 
 //Ricardo D. Muenchen 16/05/2024
 
-const prompt = require('prompt-sync')()
-let vetPar = []
-let vetImpar = []
-let cont = 0
+const prompt    = require('prompt-sync')()
+let vetPar      = []
+let vetImpar    = []
+let cont        = 0
 for(let i = 1; i <= 30; i++){
-    let valor = parseInt(prompt('Informe o '+i+'º valor: '))
+    let valor   = parseInt(prompt('Informe o '+i+'º valor: '))
     if(isNaN(valor)){
         console.log('Valor informado não é um numero!')
         cont++
@@ -22,13 +22,13 @@ for(let i = 1; i <= 30; i++){
             vetPar.push(valor)
             if(vetPar.length == 5){
                 console.log(`Vetor Par Atual: ${vetPar}`)
-                vetPar = []
+                vetPar  = []
             }
         } else {
             vetImpar.push(valor)
             if(vetImpar.length == 5){
                 console.log(`Vetor Impar Atual: ${vetImpar}`)
-                vetImpar = []
+                vetImpar    = []
             }
         }
     }

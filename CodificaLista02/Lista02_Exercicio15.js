@@ -6,8 +6,8 @@
 
 // Ricardo D. Muenchen 07/05/2024
 
-const prompt = require('prompt-sync')()
-let vetor = []
+const prompt    = require('prompt-sync')()
+let vetor       = []
 
 for (let i = 1 ; i <= 10; i++){
     let num = parseInt(prompt('Informe o '+i+'º número inteiro: '))

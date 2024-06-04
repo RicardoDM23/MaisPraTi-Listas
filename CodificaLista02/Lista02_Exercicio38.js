@@ -11,12 +11,12 @@
 
 // Ricardo D. Muenchen 18/05/2024
 
-const prompt = require('prompt-sync')()
-let vetor = []
-let cont = 0
+const prompt    = require('prompt-sync')()
+let vetor       = []
+let cont        = 0
 
 for(let i = 1; i<=6; i++){
-    let valor = parseInt(prompt(`Informe o ${i}º valor do vetor: `))
+    let valor   = parseInt(prompt(`Informe o ${i}º valor do vetor: `))
     if(isNaN(valor)){
         console.log('Valor informado não é um numero')
         i--
@@ -37,37 +37,37 @@ if (cont != 3){
         '   4- ordene os elementos em ordem crescente\n'+
         '   5- mostre o vetor')
 
-    let ope = parseInt(prompt('Informe a operação: '))
-    let result = 0
-    let valor = 0
+    let ope     = parseInt(prompt('Informe a operação: '))
+    let result  = 0
+    let valor   = 0
     
-    if(ope==1){
+    if(ope == 1){
         for(let i = 0; i<= vetor.length -1; i++){
-            valor += vetor[i]
+            valor   += vetor[i]
         }
-        result = valor
+        result  = valor
         console.log(`A soma dos elementos do vetor é: ${result}`)
-    }else if(ope==2){
+    }else if(ope == 2){
         for(let i = 0; i<= vetor.length -1; i++){
             if (i == 0){
-                valor = vetor[i]
+                valor   = vetor[i]
             } else {
-                valor *= vetor[i]
+                valor   *= vetor[i]
             }
         }
-        result = valor
+        result  = valor
         console.log(`O produto dos elementos do vetor é: ${result}`)
-    }else if(ope==3){
+    }else if(ope ==3 ){
         for(let i = 0; i<= vetor.length -1; i++){
-            valor += vetor[i]
+            valor   += vetor[i]
         }
-        result = valor/(vetor.length)
+        result  = valor/(vetor.length)
         console.log(`A media dos elementos do vetor é: ${result}`)
-    }else if(ope==4){
+    }else if(ope == 4){
         console.log(`Vetor informado: ${vetor}`)
         vetor.sort((a, b) => a - b)
         console.log(`Vetor ordenado: ${vetor}`)
-    }else if(ope==5){
+    }else if(ope == 5){
         console.log(`Vetor informado: ${vetor}`)
     }else {
         console.log('Operação não encontrada!')

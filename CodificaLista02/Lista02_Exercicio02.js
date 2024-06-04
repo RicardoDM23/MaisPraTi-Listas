@@ -6,14 +6,14 @@
 
 //  Ricardo D. Muenchen 03/05/2024
 
-const prompt = require('prompt-sync')();
+const prompt    = require('prompt-sync')();
 
-let velocidade = parseInt(prompt('1 - Qual é a valocidade do carro? '));
-let velExtra = 0;
+let speed       = parseInt(prompt('1 - Qual é a valocidade do carro? '));
+let speedExtra  = 0;
 
-if (velocidade > 80){
-    velExtra = velocidade - 80
-    console.log('Usuário multado! Valor da multa: R$ '+(velExtra*5)+',00');
+if (speed > 80){
+    speedExtra  = speed - 80
+    console.log('Usuário multado! Valor da multa: R$ '+(speedExtra*5)+',00');
 } else {
     console.log('Usuário não foi multado! Parabéns.')
 }

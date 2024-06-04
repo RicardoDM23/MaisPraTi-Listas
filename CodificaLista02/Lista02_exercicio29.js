@@ -12,25 +12,25 @@
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
-
 const M = Array.from({ length: 5 }, () => 
     Array.from({ length: 5 }, () => rand(1, 10))
 )
-let a = 0
-let b = 0
-let c = 0
-let d = 0
+
+let a   = 0
+let b   = 0
+let c   = 0
+let d   = 0
 
 for(let i=0; i<5; i++){
     for(let j=0; j<5; j++){
         if(i == 4){
-            a += M[i][j]
+            a   += M[i][j]
         }
         if(j == 2){
-            b += M[i][j]
+            b   += M[i][j]
         }
         if (i == j){
-            c += M[i][j]
+            c   += M[i][j]
         }
         d += M[i][j]
     }

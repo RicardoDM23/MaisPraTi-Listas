@@ -6,11 +6,11 @@
 
 // Ricardo D. Muenchen 06/05/2024
 
-const prompt = require('prompt-sync')()
-let vetor = []
+const prompt    = require('prompt-sync')()
+let vetor       = []
 
 for (let i = 1; i <= 7; i++){
-    let nome = prompt('Informe o '+i+'º nome: ')
+    let nome    = prompt('Informe o '+i+'º nome: ')
     vetor.unshift(nome)
 }
 

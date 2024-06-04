@@ -6,15 +6,15 @@
 
 //  Ricardo D. Muenchen 03/05/2024
 
-const prompt = require('prompt-sync')();
+const prompt    = require('prompt-sync')();
 console.log('Em caso de valores "quebrados" usar . ')
-let dist = Number(prompt('1 - Qual é a distância (KM) que quer percorrer? '))
-let valor = 0;
+let dist    = Number(prompt('1 - Qual é a distância (KM) que quer percorrer? '))
+let val     = 0;
 
 if(dist <= 200){
-    valor = dist * 0.5
+    val = dist * 0.5
 } else {
-    valor = dist * 0.45
+    val = dist * 0.45
 }
 
-console.log(`Valor total da viagem: R$ ${valor.toFixed(2)}`);
+console.log(`Valor total da viagem: R$ ${val.toFixed(2)}`);

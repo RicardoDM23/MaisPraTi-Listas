@@ -16,7 +16,7 @@ const dados = {
     vetor: [1,2,3,4,5],
     array: ['a','b','c','d','e']
 }
-let apenasArrays = {}
+let apenasArrays    = {}
 
 for(let info in dados){
     if(Array.isArray(dados[info])){

@@ -10,21 +10,21 @@ function combinar(obj1, obj2) {
     return { ...obj1, ...obj2 }
 }
 
-obj1 = {
+obj1    = {
     nome: 'pedro',
     idade: 30,
     valor: 123,
     local: 'rua principal'
 }
 
-obj2 = {
+obj2    = {
     nome: 'jose',
     quantidade: 321,
     numeroEndereco: 21,
     valor: 213
 }
 
-objCombinado = combinar(obj1, obj2)
+objCombinado    = combinar(obj1, obj2)
 console.log('Objeto 1:')
 console.log(obj1)
 console.log('\nObjeto 2: ')
