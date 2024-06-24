@@ -1,0 +1,14 @@
+footer hr {
+    clear: both;
+}
+
+footer {
+    background-color: #efefef;
+    opacity: 1;
+    height: 3rem;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 0.8rem;
+}

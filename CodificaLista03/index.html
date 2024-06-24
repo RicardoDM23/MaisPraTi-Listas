@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Python</title>
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+<body>
+    <button onclick="toTop()" id="btnToTop">
+        <img src="./assets/icons/backtotop.jpg" id="toTopImg">
+    </button>
+    <header>
+        <div class="logo">
+            <img src="./assets/icons/python-logo.png" class="logoIcon">
+            <h1 class="nomeLogo">
+                <span id="letraComun">Curso</span>
+                <span id="letraLogo">Pyt</span>hon
+                <span id="letraComun">!</span>
+            </h1>
+        </div>
+        <div class="btnHeader">
+            <a class="btn red">Inscreva-se</a>
+        </div>
+        
+    </header>
+    <main>
+        <div class="mainDiv">
+            <section class="sec1">
+                <div class="cpythonMin">
+                    <span id="letraComun">Curso</span>
+                    <span id="letraLogo">Pyt</span>hon
+                    <span id="letraComun">!</span>
+                </div>
+                <div class="pqPython">
+                    <h3><strong>Por que Python?</strong></h3>
+    
+                    <p>
+                        Python é uma linguagem de programação versátil, usada em diversos campos como desenvolvimento web, ciência de dados, inteligência artificial, automação e muito mais. Com uma sintaxe simples e clara, Python é a escolha ideal para iniciantes e profissionais.
+                    </p>
+    
+                    <p class="mais" 
+                    onclick="abrirDialog()">
+                        <a href="#" 
+                            id="pqPythonMaisInfo"
+                            onclick="abrirDialog()" >
+                            Mais Info!
+                        </a>
+                    </p>
+                    <!-- dialog mais info -->
+                    <dialog>
+                        <button class="modalClose" onclick="fecharDiaglog()">Fechar</button>
+                        <div id="pqPythonDetalhado">
+                            <h3><strong>Por que Python?</strong></h3>
+                            
+                            <h4>1. Sintaxe Simples e Legível</h4>
+            
+                            <p>
+                                Python foi projetado com a simplicidade em mente. Sua sintaxe clara e intuitiva permite que os programadores se concentrem em resolver problemas em vez de se preocupar com a complexidade da linguagem. Isso torna Python uma excelente escolha para iniciantes, que podem rapidamente entender e escrever código eficaz.
+                            </p>
+            
+                            <h4>2. Versatilidade e Aplicações Amplas</h4>
+                            <p><strong>Python é usado em uma variedade de áreas, incluindo:</strong></p>
+            
+                            <ul id="listaAreaPython">
+                                <li class="itemListaAreaPython">Desenvolvimento Web: Com frameworks como Django e Flask.</li>
+                                <li class="itemListaAreaPython">Ciência de Dados: Utilizado para análise de dados, visualização e aprendizado de máquina com bibliotecas como Pandas, Matplotlib e Scikit-learn.</li>
+                                <li class="itemListaAreaPython">Inteligência Artificial e Machine Learning: Ferramentas como TensorFlow e Keras facilitam o desenvolvimento de modelos avançados.</li>
+                                <li class="itemListaAreaPython">Automação e Scripts: Ideal para automatizar tarefas repetitivas e scripts de administração de sistemas.</li>
+                                <li class="itemListaAreaPython">Desenvolvimento de Jogos: Bibliotecas como Pygame permitem criar jogos de maneira eficiente.</li>
+                                <li class="itemListaAreaPython">Aplicações Científicas e Numéricas: Com o uso de bibliotecas como NumPy e SciPy.</li>
+                            </ul>
+
+                            <h4>3. Comunidade Ativa e Recursos Abundantes</h4>
+            
+                            <p>
+                                A comunidade de Python é uma das mais grandes e ativas do mundo da programação. Isso significa que há uma abundância de recursos disponíveis para aprender e resolver problemas:
+                            </p>
+            
+                                <p>
+                                    Documentação Extensa: A documentação oficial de Python é detalhada e fácil de seguir.
+                                    Tutoriais e Cursos Online: Inúmeros tutoriais, cursos online e livros gratuitos ou pagos.
+                                    Fóruns e Comunidades: Fóruns como Stack Overflow e comunidades como o Reddit têm milhares de membros prontos para ajudar.
+                                </p>
+            
+                            <h4>4. Altamente Demandado no Mercado de Trabalho</h4>
+            
+                            <p>
+                                Python é uma das habilidades mais procuradas no mercado de trabalho atual. Empresas de tecnologia, startups e grandes corporações estão constantemente em busca de desenvolvedores Python para preencher uma variedade de funções. Aprender Python pode abrir portas para diversas oportunidades de carreira bem remuneradas.
+                            </p>
+            
+                            <h4>5. Integração com Outras Tecnologias</h4>
+            
+                            <p>
+                                Python se integra facilmente com outras linguagens e tecnologias. Ele pode ser usado em conjunto com C/C++ para melhorar o desempenho, com JavaScript para desenvolvimento web, e com SQL para gerenciamento de banco de dados. Isso torna Python uma ferramenta poderosa em um ecossistema de desenvolvimento diversificado.
+                            </p>
+            
+                            <h4>6. Desenvolvimento Rápido</h4>
+            
+                            <p>
+                                Graças à sua simplicidade e a uma vasta coleção de bibliotecas e frameworks, Python permite um desenvolvimento rápido. Isso significa que você pode criar protótipos e aplicativos completos mais rapidamente do que com muitas outras linguagens.
+                            </p>
+            
+                            <h4>7. Ótimo para Prototipagem e Desenvolvimento Ágil</h4>
+            
+                            <p>
+                                Python é frequentemente utilizado para prototipagem rápida e desenvolvimento ágil devido à sua flexibilidade e à facilidade com que novas ideias podem ser testadas e iteradas. Isso é crucial em ambientes de startups e em projetos de inovação.
+                            </p>
+            
+                            <p>
+                                Aprender Python não apenas lhe fornece uma habilidade valiosa e amplamente aplicável, mas também abre portas para uma vasta gama de oportunidades e áreas de especialização. Seja você um iniciante que deseja entrar no mundo da programação ou um profissional buscando expandir suas habilidades, Python é uma escolha poderosa e inteligente.
+                            </p>
+                        </div>
+                        <button class="modalClose" onclick="fecharDiaglog()">Fechar</button>
+                    </dialog>
+                </div>
+
+                <div id="oqaprender">
+                    <h3>O que você vai aprender:</h3>
+                    <div class="mudaCorBot"></div>
+                    <div class="aprenderContent">
+                        <div class="aprenderTxt">
+
+                            <strong>Fundamentos da Programação:</strong>
+                            <p>Entenda os conceitos básicos como variáveis, loops, e condicionais.</p>
+                            <strong>Primeiros Passos com Python:</strong>
+                            <p>Aprenda a instalar o Python e a configurar o ambiente de desenvolvimento.</p>
+                            <strong>Projetos Práticos:</strong>
+                            <p>Desenvolva pequenos projetos práticos que consolidam o aprendizado.</p>
+                            <strong>Recursos e Materiais de Estudo:</strong>
+                            <p>Acesse uma variedade de recursos, como livros, tutoriais e exercícios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="clear"></div>
+                
+                <h3 class="conteudoCursoTitulo"><strong>Conteúdo do Curso:</strong></h3>
+                <div class="conteudoCurso">
+                    <div class="tableCards">
+                        <div class="cardCont card1">
+                            <h4>Introdução ao Python</h4>
+                            <p>
+                                História e evolução do Python
+                                Configurando seu ambiente de desenvolvimento
+                            </p>
+                        </div>
+                        <div class="cardCont card2">
+                            <h4>Sintaxe e Estrutura Básica</h4>
+                            <p>
+                                Variáveis e Tipos de Dados
+                                Operadores e Expressões
+                            </p>
+                        </div>
+                        <div class="cardCont card3">
+                            <h4>Estruturas de Controle</h4>
+                            <p>
+                                Condicionais (if, elif, else)
+                                Loops (for, while)
+                            </p>
+                        </div>
+                        <div class="cardCont card4">
+                            <h4>Funções e Módulos</h4>
+                            <p>
+                                Definindo e Chamando Funções
+                                Importação de Módulos
+                            </p>
+                        </div>
+                        <div class="cardCont card5">
+                            <h4>Trabalhando com Listas e Dicionários</h4>
+                            <p>
+                                Métodos e Operações em Listas
+                                Manipulação de Dicionários
+                            </p>
+                        </div>
+                        <div class="cardCont card6">
+                            <h4>Trabalhando com Listas e Dicionários</h4>
+                            <p>
+                                Calculadora Simples
+                                Gerador de Senhas
+                                Analisador de Texto
+                            </p>
+                        </div>
+                    </div>   
+                </div>
+                
+                <div class="carouselBase">
+                    <div class="carouselFotos">
+                        <button class="carouselButton carouselButtonLeft">
+                            <img src="./assets/icons/leftArrow.svg">
+                        </button>
+                        <div class="carouselContainer">
+                            <ul class="carouselTrack">
+                                <li class="carouselSlide">
+                                    <img class="carouselImgs" src="./assets/images/carousel1.jpg">
+                                </li>
+                                <li class="carouselSlide">
+                                    <img class="carouselImgs" src="./assets/images/carousel2.jpg">
+                                </li>
+                                <li class="carouselSlide">
+                                    <img class="carouselImgs" src="./assets/images/carousel3.jpg">
+                                </li>
+                                <li class="carouselSlide">
+                                    <img class="carouselImgs" src="./assets/images/carousel4.jpg">
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="carouselButton carouselButtonRight">
+                            <img src="./assets/icons/rightArrow.svg">
+                        </button>
+                        <div class="carouselNav">
+                            <button class="carouselNavIndicator currentSlide"></button><button class="carouselNavIndicator"></button><button class="carouselNavIndicator"></button><button class="carouselNavIndicator"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mudaCorBot"></div>
+
+                <div id="recursos">
+                    <h3>Recursos Incluídos:</h3>
+                    <div id="recVidAula">
+                        <p>
+                            Vídeos de Aulas: Acesse vídeos passo a passo para cada módulo do curso.
+                        </p>
+                    </div>
+                    <div id="recExPrat">
+                        <p>
+                            Exercícios Práticos: Exercícios para testar e aplicar seus conhecimentos.
+                        </p>
+                    </div>
+                    <div id="recMatLeit">
+                        <p>
+                            Material de Leitura: E-books e artigos para aprofundamento.
+                        </p>
+                    </div>
+                    <div id="recSuporte">
+                        <p>
+                            Suporte ao Vivo: Sessões de dúvidas ao vivo com instrutores experientes.
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="sec2">
+                <!-- cards e carousel -->
+                <div id="depoimentos">
+
+                    <h3 class="tituloDep">Depoimentos de Alunos:</h3>
+                    
+                    <div class="depoimentosCards">
+                        <div class="depoimentoCard depCard1">
+                            <div class="imgDepDiv">
+                                <img class="imgDep" src="./assets/icons/pIconGeralM1.png">
+                            </div>
+                            <h4>João Silva</h4>
+                            <p>
+                                "O curso de Python superou todas as minhas expectativas. Como iniciante, eu estava preocupado com a complexidade da linguagem, mas o instrutor explicou tudo de forma clara e prática. Agora, me sinto confiante para desenvolver meus próprios projetos!"
+                            </p>
+                        </div>
+                        <div class="depoimentoCard depCard2">
+                            <div class="imgDepDiv">
+                                <img class="imgDep" src="./assets/icons/pIconGeralW1.png">
+                            </div>
+                            <h4>Maria Oliveira</h4>
+                            <p>
+                                "Eu já tinha alguma experiência com programação, mas queria me aprofundar em Python. O curso foi excelente, cobrindo desde os conceitos básicos até tópicos mais avançados. A didática foi incrível e os exercícios práticos realmente ajudaram a consolidar meu conhecimento."
+                            </p>
+                        </div>
+                        <div class="depoimentoCard depCard3">
+                            <div class="imgDepDiv">
+                                <img class="imgDep" src="./assets/icons/pIconGeralM2.png">
+                            </div>
+                            <h4>Carlos Pereira</h4>
+                            <p>
+                                "O curso de Python foi uma experiência transformadora para mim. As aulas são bem estruturadas e o material de apoio é muito rico. Além disso, a comunidade de alunos é muito colaborativa, o que facilita muito o aprendizado."
+                            </p>
+                        </div>
+                        <div class="depoimentoCard depCard4">
+                            <div class="imgDepDiv">
+                                <img class="imgDep" src="./assets/icons/pIconGeralW2.png">
+                            </div>
+                            <h4>Ana Souza</h4>
+                            <p>
+                                "Adorei o curso! As explicações são detalhadas e os exemplos práticos são muito úteis. O instrutor sempre esteve disponível para tirar dúvidas e dar feedback construtivo. Recomendo para todos que querem aprender Python de verdade."
+                            </p>
+                        </div>
+                        <div class="depoimentoCard depCard5">
+                            <div class="imgDepDiv">
+                                <img class="imgDep" src="./assets/icons/pIconGeralW3.png">
+                            </div>
+                            <h4>Fernanda Lima</h4>
+                            <p>
+                                "O curso de Python mudou minha carreira. Consegui uma promoção no trabalho graças às habilidades que adquiri. O conteúdo é abrangente e o método de ensino é eficiente. Vale cada minuto investido!"
+                            </p>
+                        </div>
+                        <div class="depoimentoCard depCard6">
+                            <div class="imgDepDiv">
+                                <img class="imgDep" src="./assets/icons/pIconGeralM3.png">
+                            </div>
+                            <h4>Rafael Mendes</h4>
+                            <p>
+                                "Sempre tive interesse em programação, mas nunca tinha encontrado um curso que realmente me cativasse. Este curso de Python conseguiu isso! A abordagem prática e os desafios propostos me mantiveram motivado do início ao fim."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mudaCorBot"></div>
+                </div>
+            </section>
+            
+            <section class="sec3">
+                <div class="pergFrequentes">
+                    <h3>Perguntas Frequentes:</h3>
+                    <div class="pf1">
+                        <h4>Quanto tempo dura o curso?</h4>
+                        <p>
+                            O curso tem uma duração de 6 semanas, com 2 horas de aula por semana.
+                        </p>
+                    </div>
+                    <div class="pf2">
+                        <h4>Preciso de algum conhecimento prévio?</h4>
+                        <p>
+                            Não, o curso é projetado para iniciantes absolutos.
+                        </p>
+                    </div>
+                    <div class="pf3">
+                        <h4>Como posso acessar o material do curso?</h4>
+                        <p>
+                            Todo o material está disponível online, você pode acessar de qualquer lugar e a qualquer momento.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="sec4">
+                <div id="contato">
+                    <h3>Contato:</h3>
+                    <h4>Para mais informações, envie um e-mail para: contato@cursopython.com</h4>
+                    <form action="">
+    
+                    </form>
+    
+                </div>
+            </section>
+            <section class="sec5">
+                <div id="inscrevase">
+                    <h3>Inscreva-se Agora!</h3>
+                    <p>
+                        Junte-se a milhares de alunos que já transformaram suas carreiras com nosso curso de Introdução à Programação com Python. Não perca tempo!
+                    </p>
+                    <p><a href="">[Inscreva-se Já]</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <p>2024 &copy; - Meu Site.</p>
+    </footer>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/carouselFotos.js"></script>
+</body>
+</html>
