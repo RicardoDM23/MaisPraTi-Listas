@@ -124,6 +124,7 @@
         opacity: 1;
         cursor: pointer;
     }
+    
 }
 @media only screen and (max-width: 400px){
     .pqPython{
@@ -151,5 +152,8 @@
     }
     .cardCont p {
         margin-top: 0.5rem;
+    }
+    .depoNavBtn {
+        display: none;
     }
 }

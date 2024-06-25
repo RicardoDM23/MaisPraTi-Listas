@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso Python</title>
 
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./assets/css/all.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -21,6 +23,8 @@
     <link rel="stylesheet" href="./assets/css/mainRecursos.css">
     <link rel="stylesheet" href="./assets/css/mainPerguntasFrequentes.css">
     <link rel="stylesheet" href="./assets/css/mainContato.css">
+    <link rel="stylesheet" href="./assets/css/mainInsc.css">
+    
 </head>
 <body>
     <button onclick="toTop()" id="btnToTop">
@@ -35,7 +39,7 @@
                 <span id="letraComun">!</span>
             </h1>
         </div>
-        <div class="btnHeader">
+        <div class="btnHeader"  onclick="openInscModal()">
             <a class="btn red">Inscreva-se</a>
         </div>
         
@@ -293,66 +297,89 @@
             </section>
 
             <section id="depoimentos">
-                <div class="depoimentos">
+                <div class="bgDepoimentos">
 
                     <h3 class="tituloDep">Depoimentos de Alunos:</h3>
                     
-                    <div class="depoimentosCards">
-                        <div class="depoimentoCard depCard1">
-                            <div class="imgDepDiv">
-                                <img class="imgDep" src="./assets/icons/pIconGeralM1.png">
+                    <div class="depoimentos mySwiper">
+                        <div class="depoimentosContainer swiper-wrapper">
+                            <div class="depoSlide swiper-slide">
+                                <img class="depoIcon" src="./assets/icons/quoteIcon.svg">
+                                <p class="depoTxt">"O curso de Python superou todas as minhas expectativas. Como iniciante, eu estava preocupado com a complexidade da linguagem, mas o instrutor explicou tudo de forma clara e prática. Agora, me sinto confiante para desenvolver meus próprios projetos!"</p>
+                                <div class="depoPerson">
+                                    <img class="personImg" src="./assets/icons/pIconGeralM1.png">
+                                    <div class="infoPerson">
+                                        <p class="nomePerson">João Silva</p>
+                                        <p class="funcPerson">Aluno</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>João Silva</h4>
-                            <p>
-                                "O curso de Python superou todas as minhas expectativas. Como iniciante, eu estava preocupado com a complexidade da linguagem, mas o instrutor explicou tudo de forma clara e prática. Agora, me sinto confiante para desenvolver meus próprios projetos!"
-                            </p>
-                        </div>
-                        <div class="depoimentoCard depCard2">
-                            <div class="imgDepDiv">
-                                <img class="imgDep" src="./assets/icons/pIconGeralW1.png">
+
+                            <div class="depoSlide swiper-slide">
+                                <img class="depoIcon" src="./assets/icons/quoteIcon.svg">
+                                <p class="depoTxt">"Eu já tinha alguma experiência com programação, mas queria me aprofundar em Python. O curso foi excelente, cobrindo desde os conceitos básicos até tópicos mais avançados. A didática foi incrível e os exercícios práticos realmente ajudaram a consolidar meu conhecimento."</p>
+                                <div class="depoPerson">
+                                    <img class="personImg" src="./assets/icons/pIconGeralW1.png">
+                                    <div class="infoPerson">
+                                        <p class="nomePerson">Maria Oliveira</p>
+                                        <p class="funcPerson">Aluno</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Maria Oliveira</h4>
-                            <p>
-                                "Eu já tinha alguma experiência com programação, mas queria me aprofundar em Python. O curso foi excelente, cobrindo desde os conceitos básicos até tópicos mais avançados. A didática foi incrível e os exercícios práticos realmente ajudaram a consolidar meu conhecimento."
-                            </p>
-                        </div>
-                        <div class="depoimentoCard depCard3">
-                            <div class="imgDepDiv">
-                                <img class="imgDep" src="./assets/icons/pIconGeralM2.png">
+
+                            <div class="depoSlide swiper-slide">
+                                <img class="depoIcon" src="./assets/icons/quoteIcon.svg">
+                                <p class="depoTxt">"O curso de Python foi uma experiência transformadora para mim. As aulas são bem estruturadas e o material de apoio é muito rico. Além disso, a comunidade de alunos é muito colaborativa, o que facilita muito o aprendizado."</p>
+                                <div class="depoPerson">
+                                    <img class="personImg" src="./assets/icons/pIconGeralM2.png">
+                                    <div class="infoPerson">
+                                        <p class="nomePerson">Carlos Pereira</p>
+                                        <p class="funcPerson">Aluno</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Carlos Pereira</h4>
-                            <p>
-                                "O curso de Python foi uma experiência transformadora para mim. As aulas são bem estruturadas e o material de apoio é muito rico. Além disso, a comunidade de alunos é muito colaborativa, o que facilita muito o aprendizado."
-                            </p>
-                        </div>
-                        <div class="depoimentoCard depCard4">
-                            <div class="imgDepDiv">
-                                <img class="imgDep" src="./assets/icons/pIconGeralW2.png">
+
+                            <div class="depoSlide swiper-slide">
+                                <img class="depoIcon" src="./assets/icons/quoteIcon.svg">
+                                <p class="depoTxt">"Adorei o curso! As explicações são detalhadas e os exemplos práticos são muito úteis. O instrutor sempre esteve disponível para tirar dúvidas e dar feedback construtivo. Recomendo para todos que querem aprender Python de verdade."</p>
+                                <div class="depoPerson">
+                                    <img class="personImg" src="./assets/icons/pIconGeralW2.png">
+                                    <div class="infoPerson">
+                                        <p class="nomePerson">Ana Souza</p>
+                                        <p class="funcPerson">Aluna</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Ana Souza</h4>
-                            <p>
-                                "Adorei o curso! As explicações são detalhadas e os exemplos práticos são muito úteis. O instrutor sempre esteve disponível para tirar dúvidas e dar feedback construtivo. Recomendo para todos que querem aprender Python de verdade."
-                            </p>
-                        </div>
-                        <div class="depoimentoCard depCard5">
-                            <div class="imgDepDiv">
-                                <img class="imgDep" src="./assets/icons/pIconGeralW3.png">
+
+                            <div class="depoSlide swiper-slide">
+                                <img class="depoIcon" src="./assets/icons/quoteIcon.svg">
+                                <p class="depoTxt">"O curso de Python mudou minha carreira. Consegui uma promoção no trabalho graças às habilidades que adquiri. O conteúdo é abrangente e o método de ensino é eficiente. Vale cada minuto investido!"</p>
+                                <div class="depoPerson">
+                                    <img class="personImg" src="./assets/icons/pIconGeralW3.png">
+                                    <div class="infoPerson">
+                                        <p class="nomePerson">Fernanda Lima</p>
+                                        <p class="funcPerson">Aluna</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Fernanda Lima</h4>
-                            <p>
-                                "O curso de Python mudou minha carreira. Consegui uma promoção no trabalho graças às habilidades que adquiri. O conteúdo é abrangente e o método de ensino é eficiente. Vale cada minuto investido!"
-                            </p>
-                        </div>
-                        <div class="depoimentoCard depCard6">
-                            <div class="imgDepDiv">
-                                <img class="imgDep" src="./assets/icons/pIconGeralM3.png">
+
+                            <div class="depoSlide swiper-slide">
+                                <img class="depoIcon" src="./assets/icons/quoteIcon.svg">
+                                <p class="depoTxt">"Sempre tive interesse em programação, mas nunca tinha encontrado um curso que realmente me cativasse. Este curso de Python conseguiu isso! A abordagem prática e os desafios propostos me mantiveram motivado do início ao fim."</p>
+                                <div class="depoPerson">
+                                    <img class="personImg" src="./assets/icons/pIconGeralM3.png">
+                                    <div class="infoPerson">
+                                        <p class="nomePerson">Rafael Mendes</p>
+                                        <p class="funcPerson">Aluno</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Rafael Mendes</h4>
-                            <p>
-                                "Sempre tive interesse em programação, mas nunca tinha encontrado um curso que realmente me cativasse. Este curso de Python conseguiu isso! A abordagem prática e os desafios propostos me mantiveram motivado do início ao fim."
-                            </p>
                         </div>
+                        <div class="swiper-button-next depoNavBtn"></div>
+                        <div class="swiper-button-prev  depoNavBtn"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
+
                 </div>
             </section>
             
@@ -417,9 +444,33 @@
             </section>
 
             <section id="inscrevase">
-                <div class="btnInscMain">
+                <div class="btnInscMain" onclick="openInscModal()">
                     <a class="btn red">Inscreva-se</a>
                 </div>
+                <dialog class="inscDialog">
+                    <h3 class="inscDialogTitle">Formulário de Inscrição</h2>
+                        <form class="inscDialogForm" id="inscDialogForm">
+                            <label class="inscDialogLabel" for="firstname">Nome:</label>
+                            <input type="text" id="inscDialogFirstname" name="firstname" required>
+
+                            <label class="inscDialogLabel" for="lastname">Sobrenome:</label>
+                            <input type="text" id="inscDialogLastname" name="lastname" required>
+
+                            <label class="inscDialogLabel" for="email">E-mail:</label>
+                            <input type="email" id="inscDialogEmail" name="email" required>
+
+                            <label class="inscDialogLabel" for="phone">Número de Telefone:</label>
+                            <input type="tel" id="inscDialogPhone" name="phone" required placeholder="(xx)xxxxx-xxxx">
+
+                            <label class="inscDialogLabel" for="about">Sobre Você:</label>
+                            <textarea id="about" name="about" rows="6" required></textarea>
+
+                            <div class="inscDialogError" id="inscDialogErrorM"></div>
+
+                            <button class="inscDialogBtn" type="submit">Inscrever-se</button>
+                            <button class="closeDialogBtn" type="button" onclick="closeInscModal()">Fechar</button>
+                        </form>
+                </dialog>
             </section>
         </div>
     </main>
@@ -435,9 +486,13 @@
 
         <p>2024 &copy; - Meu Site.</p>
     </footer>
-    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/carouselFotos.js"></script>
     <script src="./assets/js/perguntasFrequentes.js"></script>
     <script src="./assets/js/contato.js"></script>
+    <script src="./assets/js/formularioInscricao.js"></script>
+    
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/depoimentos.js"></script>
 </body>
 </html>

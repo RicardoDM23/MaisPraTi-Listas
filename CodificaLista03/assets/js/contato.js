@@ -1,11 +1,13 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+const enviar = document.getElementById('contactForm')
+
+enviar.addEventListener('submit', function(event) {
     event.preventDefault(); // Evita o envio do formulário
 
-    var email = document.getElementById('email').value;
-    var errorMessage = document.getElementById('error-message');
+    const email = document.getElementById('email').value;
+    const errorMessage = document.getElementById('error-message');
 
     // Regex para validar o formato do e-mail
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (!emailPattern.test(email)) {
         errorMessage.textContent = 'Por favor, insira um e-mail válido.';

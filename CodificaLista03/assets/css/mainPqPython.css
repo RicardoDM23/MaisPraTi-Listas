@@ -21,40 +21,40 @@
 
 /* Modal Dialog Inicio */
 
-dialog::backdrop{
+.pqPythonDialog::backdrop{
     background-color: rgb(0, 0, 0, 0.7);
 }
-dialog {
-
+.pqPythonDialog {
     border: none;
     border-radius: 1rem;
     box-shadow: 0 0 1em rgb(0, 0, 0, .8);
     padding: 3rem;
     margin: 4rem 4rem 2rem 4rem;
 }
-dialog .modalClose{
+.pqPythonDialog .modalClose{
     position: relative;
     float: right;
     padding: 0.4rem;
     font-size: medium;
     background-color: #f1262d;
     border-radius: 0.8rem;
+    cursor: pointer;
 }
-dialog h3 {
+.pqPythonDialog h3 {
     text-decoration: underline;
     text-align: center;
 }
-dialog h4 {
+.pqPythonDialog h4 {
     margin-top: 0.5rem;
 }
-dialog p {
+.pqPythonDialog p {
     margin-top: 0.3rem;
     margin-left: 1.5rem;
 }
-dialog p strong{
+.pqPythonDialog p strong{
     margin-left: 1rem;
 }
-dialog ul li{
+.pqPythonDialog ul li{
     margin-top: 0.2rem;
     margin-left: 3rem;
 }
