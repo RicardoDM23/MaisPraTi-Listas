@@ -282,11 +282,15 @@ dialog ul li{
     background: lightgreen;
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 .carouselTrack {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
 }
 .carouselSlide {
     position: absolute;
@@ -313,6 +317,7 @@ dialog ul li{
     height: 15px;
     background: rgb(0, 0, 0, .4);
     margin: 0 1rem;
+    cursor: pointer;
 }
 .carouselNavIndicator.currentSlide{
     background: rgb(0, 0, 0, .8);
@@ -371,17 +376,10 @@ dialog ul li{
     width: 100%;
 }
 /* Recuersos Fim */
-
 /* Sec-1 Fim */
 
 /* Sec-2 Inicio*/
-.sec2 {
-
-}
 /* Depoimentos Inicio */
-#depoimentos {
-
-}
 .tituloDep{
     display: block;
     text-align: center;
@@ -393,52 +391,10 @@ dialog ul li{
     text-shadow: 1px 1px 2px #000;
     padding-top: 1.5rem;
 }
-.depoimentosCards {
-    background-color: #306998;
-    padding: 2rem;
-}
-.depoimentoCard {
-    border: 5px solid blue;
-    background-color: #306998;
-    box-shadow:  0 0 1rem 1rem rgb(0, 0, 255, 0.8);
-    width: 300px;
-    height: 410px;
-    display: block;
-    padding: 1.5rem;
-    border-radius: 15% 15% 30% 30%;
-}
-.depoimentoCard h4 {
-    float: right;
-    margin-top: 50px;
-    margin-right: 10px;
-    color: #FFD742;
-    text-shadow: 1px 1px 2px #000;
-}
-.depoimentoCard p {
-    clear: both;
-    font-size: large;
-}
-.imgDepDiv{
-    float: left;
-    width: 116px;
-    height: 116px;
-    background-color: #306998;
-    border-radius: 150px;
-    box-shadow: inset 0 0 1rem 0.5rem black;
-}
-.imgDep{
-    width: 100%;
-    height:100%;
-}
 
-.depCard1 {}
-.depCard2 {}
-.depCard3 {}
-.depCard4 {}
-.depCard5 {}
-.depCard6 {}
 /* Depoimentos Fim */
 /* Sec-2 Fim*/
+
 /* media Inicio */
 @media only screen and (max-width: 800px){
     
