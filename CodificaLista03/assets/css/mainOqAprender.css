@@ -1,6 +1,6 @@
 /* o que Aprender Inicio */
 
-#oqaprender h3 {
+.oqaprender h3 {
     display: block;
     text-align: center;
     width: 100%;
@@ -10,13 +10,13 @@
     box-shadow: 0 -0.8rem 1rem 1rem rgb(0,0,0, 0.6);
     text-shadow: 1px 1px 2px #000;
 }
-#oqaprender strong{
+.oqaprender strong{
     text-align: left;
     color: #FFD742;
     text-shadow: 1px 1px 2px #000;
     font-weight: 800;
 }
-#oqaprender p{
+.oqaprender p{
     text-align: left;
     margin: 0.5rem 0 1rem 1rem;
     font-weight: 550;

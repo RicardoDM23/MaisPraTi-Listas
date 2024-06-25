@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./assets/css/mainOqAprender.css">
     <link rel="stylesheet" href="./assets/css/mainPqPython.css">
     <link rel="stylesheet" href="./assets/css/mainRecursos.css">
+    <link rel="stylesheet" href="./assets/css/mainPerguntasFrequentes.css">
+    <link rel="stylesheet" href="./assets/css/mainContato.css">
 </head>
 <body>
     <button onclick="toTop()" id="btnToTop">
@@ -40,7 +42,7 @@
     </header>
     <main>
         <div class="mainDiv">
-            <section class="sec1">
+            <section id="infos">
                 <div class="cpythonMin">
                     <span id="letraComun">Curso</span>
                     <span id="letraLogo">Pyt</span>hon
@@ -62,7 +64,7 @@
                         </a>
                     </p>
                     <!-- dialog mais info -->
-                    <dialog>
+                    <dialog class="pqPythonDialog">
                         <button class="modalClose" onclick="fecharDiaglog()">Fechar</button>
                         <div id="pqPythonDetalhado">
                             <h3><strong>Por que Python?</strong></h3>
@@ -129,7 +131,7 @@
                     </dialog>
                 </div>
 
-                <div id="oqaprender">
+                <div class="oqaprender">
                     <h3>O que você vai aprender:</h3>
                     <div class="mudaCorBot"></div>
                     <div class="aprenderContent">
@@ -228,7 +230,7 @@
                     </div>
                 </div>
                 
-                <div id="recursos">
+                <div class="recursos">
                     <h3>Recursos Incluídos:</h3>
                     <div class="mudaCorBot"></div>
                     <div class="bgRec">
@@ -290,8 +292,8 @@
                 </div>
             </section>
 
-            <section class="sec2">
-                <div id="depoimentos">
+            <section id="depoimentos">
+                <div class="depoimentos">
 
                     <h3 class="tituloDep">Depoimentos de Alunos:</h3>
                     
@@ -351,46 +353,69 @@
                             </p>
                         </div>
                     </div>
-                    <div class="mudaCorBot"></div>
                 </div>
             </section>
             
-            <section class="sec3">
-                <div class="pergFrequentes">
-                    <h3>Perguntas Frequentes:</h3>
-                    <div class="pf1">
-                        <h4>Quanto tempo dura o curso?</h4>
-                        <p>
-                            O curso tem uma duração de 6 semanas, com 2 horas de aula por semana.
-                        </p>
+            <section id="perguntasFrequentes">
+                <h3 class="tituloPerguntas">Perguntas Frequentes:</h3>
+                <div class="bgPf">
+                    <div class="perguntasFrequentes">
+                        
+                        <div class="pergunta pergunta1">
+                            <h4>Quanto tempo dura o curso?</h4>
+                        </div>
+                        <div class="resposta resposta1 hiddenResp">
+                            <p>
+                                O curso tem uma duração de 6 semanas, com 2 horas de aula por semana.
+                            </p>
+                        </div>
+    
+                        <div class="pergunta pergunta2">
+                            <h4>Preciso de algum conhecimento prévio?</h4>
+                        </div>
+                        <div class="resposta resposta2 hiddenResp"> 
+                            <p>
+                                Não, o curso é projetado para iniciantes absolutos.
+                            </p>
+                        </div> 
+
+                        <div class="pergunta pergunta3">
+                            <h4>Como posso acessar o material do curso?</h4>
+                        </div>
+                        <div class="resposta resposta3 hiddenResp"> 
+                            <p>
+                                Todo o material está disponível online, você pode acessar de qualquer lugar e a qualquer momento.
+                            </p>
+                        </div>
                     </div>
-                    <div class="pf2">
-                        <h4>Preciso de algum conhecimento prévio?</h4>
-                        <p>
-                            Não, o curso é projetado para iniciantes absolutos.
-                        </p>
-                    </div>
-                    <div class="pf3">
-                        <h4>Como posso acessar o material do curso?</h4>
-                        <p>
-                            Todo o material está disponível online, você pode acessar de qualquer lugar e a qualquer momento.
-                        </p>
-                    </div>
-                </div>
+                </div> 
             </section>
             
-            <section class="sec4">
-                <div id="contato">
+            <section id="contato">
+                <div class="contato">
                     <h3>Contato:</h3>
                     <h4>Para mais informações, envie um e-mail para: contato@cursopython.com</h4>
-                    <form action="">
-    
+                </div>
+                <div class="mudaCorBot"></div>
+                <div class="contatoContent">    
+                    <form action="/submit_form" method="post" class="formulario">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="subject">Assunto:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    
+                        <button class="btnEnviar" type="submit">Enviar</button>
                     </form>
     
                 </div>
             </section>
-            <section class="sec5">
-                <div id="inscrevase">
+
+            <section id="inscrevase">
+                <div class="inscrevase">
                     <h3>Inscreva-se Agora!</h3>
                     <p>
                         Junte-se a milhares de alunos que já transformaram suas carreiras com nosso curso de Introdução à Programação com Python. Não perca tempo!
@@ -406,5 +431,6 @@
     </footer>
     <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/carouselFotos.js"></script>
+    <script src="./assets/js/perguntasFrequentes.js"></script>
 </body>
 </html>

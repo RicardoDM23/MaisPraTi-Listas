@@ -1,6 +1,6 @@
 /*Recursos Inicio*/
 
-#recursos h3 {
+.recursos h3 {
     display: block;
     text-align: center;
     width: 100%;
@@ -9,7 +9,7 @@
     color: #FFD742;
     text-shadow: 1px 1px 2px #000;
 }
-#recursos {
+.recursos {
     position: relative;
 }
 .bgRec {

@@ -1,4 +1,4 @@
-const modal = document.querySelector("dialog")
+const modal = document.querySelector(".pqPythonDialog")
 
 function abrirDialog(){
     modal.showModal()
