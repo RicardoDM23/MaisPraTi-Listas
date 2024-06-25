@@ -30,7 +30,7 @@
     display: block;
     padding: 0.7rem;
     color: #FFD742;
-    height: 35px;
+    height: fit-content;
     text-shadow: 1px 1px 2px #000;
     cursor: pointer;
     background-color: rgba(120, 120, 120, 0.5);

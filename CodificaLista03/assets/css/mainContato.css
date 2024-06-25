@@ -49,3 +49,7 @@
 .btnEnviar:hover {
     background-color: #45a049;
 }
+.error {
+    color: red;
+    margin-bottom: 15px;
+}

@@ -6,9 +6,11 @@ footer {
     background-color: #efefef;
     opacity: 1;
     height: 3rem;
+    
 }
 
-footer p {
+footer p,
+footer h3 {
     text-align: center;
     margin-top: 0.8rem;
 }

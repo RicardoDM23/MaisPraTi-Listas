@@ -50,9 +50,23 @@ header {
     background-color: #f1262d;
     color: #fff;
 }
+
+.btnHeader{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 @media only screen and (max-width: 600px){
     .btnHeader{
         display: none;
+    }
+    .btnInscMain{
+        opacity: 1;
     }
 }
 @media only screen and (max-width: 420px){

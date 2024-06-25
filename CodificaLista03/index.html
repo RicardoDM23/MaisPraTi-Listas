@@ -398,7 +398,7 @@
                 </div>
                 <div class="mudaCorBot"></div>
                 <div class="contatoContent">    
-                    <form action="/submit_form" method="post" class="formulario">
+                    <form action="/submit_form" method="post" class="formulario" id="contactForm">
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required>
                     
@@ -407,7 +407,9 @@
                     
                         <label for="message">Mensagem:</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
-                    
+                        
+                        <div class="error" id="error-message"></div>
+
                         <button class="btnEnviar" type="submit">Enviar</button>
                     </form>
     
@@ -415,22 +417,27 @@
             </section>
 
             <section id="inscrevase">
-                <div class="inscrevase">
-                    <h3>Inscreva-se Agora!</h3>
-                    <p>
-                        Junte-se a milhares de alunos que já transformaram suas carreiras com nosso curso de Introdução à Programação com Python. Não perca tempo!
-                    </p>
-                    <p><a href="">[Inscreva-se Já]</a></p>
+                <div class="btnInscMain">
+                    <a class="btn red">Inscreva-se</a>
                 </div>
             </section>
         </div>
     </main>
     <footer>
         <hr>
+        <div class="inscrevase">
+            
+            <p>
+                Junte-se a milhares de alunos que já transformaram suas carreiras com nosso curso de Introdução à Programação com Python. Não perca tempo!
+            </p>
+            
+        </div>
+
         <p>2024 &copy; - Meu Site.</p>
     </footer>
     <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/carouselFotos.js"></script>
     <script src="./assets/js/perguntasFrequentes.js"></script>
+    <script src="./assets/js/contato.js"></script>
 </body>
 </html>
