@@ -1,0 +1,40 @@
+.btnHeader{
+    float: right;
+}
+.btnHeader .btn {
+    text-decoration: none;
+    margin: 1rem 2rem 0 0;
+    display: inline-block;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    color: #fff;
+}
+.red {
+    background-color: red;
+}
+.red:hover {
+    background-color: #f1262d;
+    color: #fff;
+}
+
+.btnHeader{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 600px){
+    .btnHeader{
+        display: none;
+    }
+}
+@media only screen and (max-width: 420px){
+
+}
+

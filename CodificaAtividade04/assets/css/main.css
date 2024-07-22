@@ -1,0 +1,51 @@
+
+/* toTop Inicio */
+#toTopImg {
+    width: 40px;
+}
+
+#btnToTop {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+/* toTop Fim */
+
+.btnInscMain{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    opacity: 0;
+}
+.btnInscMain .btn {
+    display: block;
+    width: fit-content;
+    
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px){
+    .btnInscMain{
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+}
+@media only screen and (max-width: 400px){
+
+}
+@media only screen and (max-width: 800px){
+
+}
