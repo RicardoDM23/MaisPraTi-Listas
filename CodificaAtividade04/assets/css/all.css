@@ -24,8 +24,11 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #efefef;
-    padding-top: 3rem;
+    background-color: #fefefe;
+    padding-top: 70px;
+    background: linear-gradient(50deg, #306998, #FFD742);
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .clear{

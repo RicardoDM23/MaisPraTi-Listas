@@ -1,76 +1,439 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PyPath - Home</title>
 
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="./assets/css/all.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./assets/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
 </head>
+
 <body>
     <button onclick="toTop()" id="btnToTop">
-        <img src="./assets/icons/backtotop.jpg" id="toTopImg">
+        <img src="./assets/icons/backtotop.jpg" id="toTopImg" />
     </button>
     <!-- <div class="btnHeader"  onclick="openInscModal()">
         <a class="btn red">Inscreva-se</a>
     </div> -->
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navegacao">
             <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <a class="navbar-brand" href="index.html"><span id="logoP">P</span><span id="logoY">y</span><span id="logoPath">Path</span></a>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/contato.html">Contato</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Detalhes
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="./pages/info.html">Info+</a></li>
-                      <li><a class="dropdown-item" href="./pages/meterias.html">Matérias</a></li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><span id="logoP">P</span><span id="logoY">y</span><span
+                        id="logoPath">Path</span></a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Detalhes
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./pages/info.html">Info+</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/meterias.html">Matérias</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/faq.html">FAQ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/multiapp.html">MultiApps</a>
+                        </li>
                     </ul>
-                  </li>          
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/login.html">Login</a>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
     <main>
+        <section class="sectionContainer container-fluid">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col d-md-block">
+                        <div class="row justify-content-md-center">
+                            <div class="col d-md-block">
+                                <h2>Fácil</h2>
+                                <h3>Buscar</h3>
+                                <p>
+                                    Já sabe o que quer escutar? É só procurar e apertar o play.
+                                </p>
+                                <h3>Navegar</h3>
+                                <p>
+                                    Veja os novos lançamentos, o que está bombando nas paradas e
+                                    as melhores playlists para o seu momento.
+                                </p>
+                                <h3>Descobrir</h3>
+                                <p>
+                                    Curta músicas novas toda segunda-feira com uma playlist
+                                    personalizada para você. Ou relaxe e curta uma das rádios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            
+        <section class="info">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-md-4 text-white">
+                        <h2>Fácil</h2>
+                        <h3>Buscar</h3>
+                        <p>Já sabe o que quer escutar? É só procurar e apertar o play.</p>
+                        <h3>Navegar</h3>
+                        <p>
+                            Veja os novos lançamentos, o que está bombando nas paradas e as
+                            melhores playlists para o seu momento.
+                        </p>
+                        <h3>Descobrir</h3>
+                        <p>
+                            Curta músicas novas toda segunda-feira com uma playlist
+                            personalizada para você. Ou relaxe e curta uma das rádios.
+                        </p>
+                    </div>
+                    <div class="col-md-8 d-none d-md-block">
+                        <div class="row divImg">
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/iphone1.png" alt="" />
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/iphone2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="sectServ bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-none d-md-block">
+                        <div class="row albuns">
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/img1.jpg" />
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/img2.jpg" />
+                            </div>
+                        </div>
+                        <div class="row albuns">
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/img3.jpg" />
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/img4.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>O que o Spotify tem?</h2>
+                        <h3>Músicas</h3>
+                        <p>
+                            O Spotify tem milhões de músicas. Escute seus sons favoritos,
+                            descubra novas músicas e reúna seus favoritos em um só lugar.
+                        </p>
+                        <h3>Playlists</h3>
+                        <p>
+                            No Spotify você encontra uma playlist para cada momento. Todas
+                            feitas por fanáticos e especialistas de músicas.
+                        </p>
+                        <h3>Novos lançamentos</h3>
+                        <p>
+                            Escute os novos lançamentos de singles e álbuns da semana e veja
+                            o que está bombando no top 50.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-md-4 text-white">
+                        <h2>Fácil</h2>
+                        <h3>Buscar</h3>
+                        <p>Já sabe o que quer escutar? É só procurar e apertar o play.</p>
+                        <h3>Navegar</h3>
+                        <p>
+                            Veja os novos lançamentos, o que está bombando nas paradas e as
+                            melhores playlists para o seu momento.
+                        </p>
+                        <h3>Descobrir</h3>
+                        <p>
+                            Curta músicas novas toda segunda-feira com uma playlist
+                            personalizada para você. Ou relaxe e curta uma das rádios.
+                        </p>
+                    </div>
+                    <div class="col-md-8 d-none d-md-block">
+                        <div class="row divImg">
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/iphone1.png" alt="" />
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="./assets/imagens/iphone2.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-10 d-md-block">
+                        <h2>Por que estudar Python?</h2>
+                        <p>
+                            Python é uma linguagem de programação versátil, fácil de
+                            aprender e amplamente utilizada em diversos setores da
+                            tecnologia. Sua sintaxe simples e clara facilita a leitura e a
+                            escrita de código, tornando-a uma excelente escolha para
+                            iniciantes e profissionais experientes. Além disso, Python
+                            possui uma vasta biblioteca de ferramentas e frameworks que
+                            aceleram o desenvolvimento de projetos, desde scripts simples
+                            até aplicações complexas.
+                        </p>
+
+                        <h3>No que Python é e pode ser utilizado?</h3>
+
+                        <p>
+                            Python é uma linguagem de propósito geral, o que significa que
+                            pode ser usada em uma ampla variedade de aplicações, incluindo:
+                        </p>
+
+                        <p>
+                            Desenvolvimento Web: Frameworks como Django e Flask permitem
+                            criar sites e aplicativos web robustos. Análise de Dados:
+                            Bibliotecas como Pandas, NumPy e Matplotlib facilitam a
+                            manipulação, análise e visualização de dados.
+                        </p>
+                        <p>
+                            Inteligência Artificial e Machine Learning: Ferramentas como
+                            TensorFlow, Keras e Scikit-learn tornam o desenvolvimento de
+                            modelos de IA mais acessível.
+                        </p>
+                        <p>
+                            Automação de Tarefas: Python pode ser usado para automatizar
+                            tarefas repetitivas, economizando tempo e esforço.
+                        </p>
+                        <p>
+                            Desenvolvimento de Jogos: Bibliotecas como Pygame permitem a
+                            criação de jogos.
+                        </p>
+                        <p>
+                            Computação Científica: Python é amplamente utilizado em
+                            pesquisas científicas para simulações e análises de dados
+                            complexos.
+                        </p>
+                        <p>
+                            Desenvolvimento de Software: Pode ser usado para criar
+                            aplicações de desktop e ferramentas de software diversas.
+                        </p>
+
+                        <h2>Breve introdução as matérias!</h2>
+                        <h3>1. Introdução ao Python e Configuração do Ambiente</h3>
+                        <p>
+                            Aprenda os conceitos básicos da linguagem Python, configure seu
+                            ambiente de desenvolvimento e escreva seus primeiros programas.
+                        </p>
+                        <h3>2. Estruturas de Dados e Controle de Fluxo</h3>
+                        <p>
+                            Explore variáveis, listas, tuplas, dicionários e estruturas de
+                            controle como loops e condicionais.
+                        </p>
+                        <h3>3. Funções e Módulos</h3>
+                        <p>
+                            Entenda como definir e usar funções, bem como a importância dos
+                            módulos e pacotes em Python.
+                        </p>
+                        <h3>4. Programação Orientada a Objetos</h3>
+                        <p>
+                            Descubra os princípios da POO em Python, incluindo classes,
+                            objetos, herança e polimorfismo.
+                        </p>
+                        <h3>5. Manipulação de Arquivos e Exceções</h3>
+                        <p>
+                            Aprenda a ler e escrever arquivos, além de tratar exceções para
+                            criar programas robustos.
+                        </p>
+                        <h3>6. Bibliotecas para Análise de Dados</h3>
+                        <p>
+                            Familiarize-se com bibliotecas essenciais como Pandas e NumPy
+                            para manipulação e análise de dados.
+                        </p>
+                        <h3>7. Visualização de Dados</h3>
+                        <p>
+                            Utilize Matplotlib e Seaborn para criar visualizações gráficas
+                            que facilitam a interpretação de dados.
+                        </p>
+                        <h3>8. Desenvolvimento Web com Django</h3>
+                        <p>
+                            Construa aplicações web usando o framework Django, desde a
+                            configuração inicial até a criação de funcionalidades avançadas.
+                        </p>
+                        <h3>9. Introdução a Machine Learning</h3>
+                        <p>
+                            Explore os conceitos básicos de machine learning e implemente
+                            modelos simples usando Scikit-learn.
+                        </p>
+                        <h3>10. Projeto Final</h3>
+                        <p>
+                            Aplique todo o conhecimento adquirido ao longo do curso em um
+                            projeto final prático e abrangente.
+                        </p>
+
+                        <h2>Depoimentos de alunos e professores do curso</h2>
+                        <h3>Alunos</h3>
+                        <p>
+                            João Silva "Antes de começar o curso, eu não tinha experiência
+                            com programação. Graças às aulas detalhadas e ao suporte dos
+                            instrutores, consegui aprender Python e hoje trabalho como
+                            desenvolvedor web."
+                        </p>
+                        <p>
+                            Maria Oliveira "O curso é muito bem estruturado e os conteúdos
+                            são apresentados de forma clara. As práticas e os projetos me
+                            ajudaram a consolidar o conhecimento e a ganhar confiança."
+                            Professores
+                        </p>
+                        <p>
+                            Carlos Almeida "O curso superou minhas expectativas. A abordagem
+                            prática e os projetos desafiadores me prepararam para enfrentar
+                            problemas reais no trabalho. Recomendo para todos que querem
+                            aprender Python de verdade."
+                        </p>
+                        <p>
+                            Fernanda Santos "A flexibilidade do curso foi essencial para
+                            mim. Consegui estudar no meu próprio ritmo e, ao mesmo tempo,
+                            receber suporte imediato dos instrutores. Hoje sou analista de
+                            dados e uso Python diariamente."
+                        </p>
+                        <p>
+                            Rafael Costa "Os conteúdos sobre machine learning foram
+                            fascinantes. Nunca pensei que poderia entender e aplicar esses
+                            conceitos em tão pouco tempo. O curso realmente abre portas para
+                            novas oportunidades."
+                        </p>
+                        <p>
+                            Isabela Ferreira "A comunidade do curso é incrível. Trocar
+                            experiências e dicas com outros alunos foi muito enriquecedor.
+                            Senti que não estava sozinha durante todo o processo de
+                            aprendizado."
+                        </p>
+                        <h3>Professores</h3>
+                        <p>
+                            Prof. Lucas Andrade "Ensinar Python é uma experiência
+                            gratificante. Ver o progresso dos alunos e como eles aplicam o
+                            que aprenderam em projetos reais é inspirador."
+                        </p>
+                        <p>
+                            Profa. Ana Lima "O curso foi desenvolvido com muito cuidado para
+                            garantir que os alunos tenham uma base sólida e possam enfrentar
+                            desafios reais no mercado de trabalho."
+                        </p>
+                        <p>
+                            Prof. Marcos Souza "Ver o crescimento dos alunos desde o início
+                            do curso até a conclusão dos projetos finais é extremamente
+                            recompensador. Eles saem preparados para o mercado e com uma
+                            base sólida em Python."
+                        </p>
+                        <p>
+                            Profa. Juliana Mendes "Nosso objetivo é sempre proporcionar uma
+                            experiência de aprendizado completa. É gratificante ver como os
+                            alunos se desenvolvem e aplicam o que aprenderam de forma
+                            prática e eficiente."
+                        </p>
+
+                        <h2>Recursos Incluídos:</h2>
+                        <p>
+                            Vídeos de Aulas! Acesse vídeos passo a passo para cada módulo do
+                            curso.
+                        </p>
+                        <p>
+                            Exercícios Práticos! Exercícios para testar e aplicar seus
+                            conhecimentos.
+                        </p>
+                        <p>Material de Leitura! E-books e artigos para aprofundamento.</p>
+                        <p>
+                            Suporte ao Vivo! Sessões de dúvidas ao vivo com instrutores
+                            experientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="infoSite">
+            <div class="divConteudoSite"></div>
+        </section>
     </main>
-    <footer>
-        <p>2024 &copy; - Codifica Atividade 04 - Ricardo Muenchen.</p>
+    <footer class="position-absolute w-100">
+        <div class="container">
+            <div class="row">
+                <div class="d-sm-flex d-lg-block justify-content-center col-md-12 col-lg-2">
+                    <h4>Atividade 4 - Ricardo D. Muenchen</h4>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <ul class="d-flex justify-content-center justify-content-lg-end">
+                        <li>
+                            <a href="">
+                                <img src="./assets/icons/facebook.png" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./assets/icons/twitter.png" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./assets/icons/instagram.png" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/carouselFotos.js"></script>
     <script src="./assets/js/perguntasFrequentes.js"></script>
     <script src="./assets/js/contato.js"></script>
     <script src="./assets/js/formularioInscricao.js"></script>
-    
+
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/depoimentos.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,3 +1,30 @@
+/* .navegacao {
+    background:rgba(200, 200, 200, 0.6)!important;
+    padding: 1rem 0;
+    background-color: #c8c8c8;
+
+} */
+
+#logoP {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #306998;
+    text-shadow: 1px 1px 2px #000;
+    
+}
+#logoY {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #FFD742;
+    text-shadow: 1px 1px 2px #000;
+}
+#logoPath{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
+}
+
+
 .btnHeader{
     float: right;
 }
@@ -27,14 +54,5 @@
     position: fixed;
     top: 0;
     right: 0;
-}
-
-@media only screen and (max-width: 600px){
-    .btnHeader{
-        display: none;
-    }
-}
-@media only screen and (max-width: 420px){
-
 }
 
