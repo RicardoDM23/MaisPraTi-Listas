@@ -36,18 +36,6 @@
     color: #fff;
 }
 
-.sectionContainer{
-    width: 90%;
-    background: rgba(212, 212, 212, 0.1);
-    border-bottom: 4rem solid #306998;
-    border-right: 4rem solid #306998;
-    border-radius: 0 0 150px 0;
-    padding: 3rem;
-    display: flex;
-    margin: 0 auto;
-}
-
-
 @media only screen and (max-width: 600px){
     .btnInscMain{
         opacity: 1;
