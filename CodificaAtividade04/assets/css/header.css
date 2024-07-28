@@ -4,14 +4,16 @@
     background-color: #c8c8c8;
 
 } */
-
+.mLogo{
+    margin-left: 8rem;
+}
 #logoP {
     font-size: 2rem;
     font-weight: 900;
     color: #306998;
-    text-shadow: 1px 1px 2px #000;
-    
+    text-shadow: 1px 1px 2px #000;  
 }
+
 #logoY {
     font-size: 2rem;
     font-weight: 900;

@@ -17,6 +17,9 @@
 </head>
 
 <body>
+  <button onclick="toTop()" id="btnToTop">
+    <img src="../assets/icons/backtotop.jpg" id="toTopImg" />
+  </button>
   <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -24,7 +27,7 @@
           aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><span id="logoP">P</span><span id="logoY">y</span><span
+        <a class="navbar-brand mLogo" href="../index.html"><span id="logoP">P</span><span id="logoY">y</span><span
             id="logoPath">Path</span></a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -67,36 +70,40 @@
   </header>
   <main>
     <section class="bg-white faqSection">
+      <div class="sticky-top bg-white py-3 w-100 mb-4 px-5">
+        <hr>
+        <div class="d-flex align-items-center justify-content-between px-5">
+        <h2 class="mb-0"><span class="d-none d-md-block">Perguntas Frequentes</span> <span class="d-md-none d-block">FAQ</span></h2>
+        <select id="faq-select" class="form-select mx-3" onchange="toQuestion()">
+          <option value="">Selecione uma pergunta...</option>
+          <option value="duracao">Qual é a duração do curso?</option>
+          <option value="experiencia">Preciso ter experiência prévia em programação?</option>
+          <option value="online">O curso é totalmente online?</option>
+          <option value="certificado">Receberei um certificado ao concluir o curso?</option>
+          <option value="requisitos">Quais são os requisitos técnicos para acompanhar o curso?</option>
+          <option value="suporte">Como funciona o suporte durante o curso?</option>
+          <option value="projeto">Há algum projeto prático no curso?</option>
+          <option value="ritmo">Posso fazer o curso no meu próprio ritmo?</option>
+          <option value="conteudo">Posso acessar o conteúdo do curso após a conclusão?</option>
+          <option value="custo">Há algum custo adicional para o material do curso?</option>
+          <option value="idiomas">O curso oferece suporte em outras línguas?</option>
+          <option value="pagamento">Quais são as formas de pagamento aceitas?</option>
+          <option value="cancelar">Posso cancelar minha inscrição e obter um reembolso?</option>
+          <option value="avaliacao">Como são avaliadas as atividades do curso?</option>
+          <option value="comunidade">Há uma comunidade de alunos e ex-alunos?</option>
+          <option value="emprego">O curso oferece alguma garantia de emprego?</option>
+          <option value="desconto">Há descontos para grupos ou empresas?</option>
+          <option value="progresso">Como posso acompanhar meu progresso no curso?</option>
+          <option value="certificacoes">O curso cobre preparação para certificações de Python?</option>
+          <option value="interacao">Posso interagir com os instrutores durante o curso?</option>
+        </select>
+      </div>
+      </div>
       <div class="container">
         <div class="row justify-content-md-center">
+          
           <div class="col-md-10 d-md-block">
-            <div class="d-flex align-items-center justify-content-between mb-4 sticky-top bg-white py-3">
-              <h2 class="mb-0">Perguntas Frequentes (FAQ)</h2>
-
-              <select id="faq-select" class="form-select ml-3" onchange="toQuestion()">
-                <option value="">Selecione uma pergunta...</option>
-                <option value="duracao">Qual é a duração do curso?</option>
-                <option value="experiencia">Preciso ter experiência prévia em programação?</option>
-                <option value="online">O curso é totalmente online?</option>
-                <option value="certificado">Receberei um certificado ao concluir o curso?</option>
-                <option value="requisitos">Quais são os requisitos técnicos para acompanhar o curso?</option>
-                <option value="suporte">Como funciona o suporte durante o curso?</option>
-                <option value="projeto">Há algum projeto prático no curso?</option>
-                <option value="ritmo">Posso fazer o curso no meu próprio ritmo?</option>
-                <option value="conteudo">Posso acessar o conteúdo do curso após a conclusão?</option>
-                <option value="custo">Há algum custo adicional para o material do curso?</option>
-                <option value="idiomas">O curso oferece suporte em outras línguas?</option>
-                <option value="pagamento">Quais são as formas de pagamento aceitas?</option>
-                <option value="cancelar">Posso cancelar minha inscrição e obter um reembolso?</option>
-                <option value="avaliacao">Como são avaliadas as atividades do curso?</option>
-                <option value="comunidade">Há uma comunidade de alunos e ex-alunos?</option>
-                <option value="emprego">O curso oferece alguma garantia de emprego?</option>
-                <option value="desconto">Há descontos para grupos ou empresas?</option>
-                <option value="progresso">Como posso acompanhar meu progresso no curso?</option>
-                <option value="certificacoes">O curso cobre preparação para certificações de Python?</option>
-                <option value="interacao">Posso interagir com os instrutores durante o curso?</option>
-              </select>
-            </div>
+            
 
             <h3 id="duracao">Qual é a duração do curso?</h3>
             <p>
