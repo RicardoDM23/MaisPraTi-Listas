@@ -17,8 +17,11 @@
 </head>
 
 <body>
+  <button onclick="toTop()" id="btnToTop">
+    <img src="../assets/icons/backtotop.jpg" id="toTopImg" />
+  </button>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar fixed-top navbar-expand-lg bg-white border shadow-sm">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
           aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +35,10 @@
               <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="info.html">Info+</a>
+              <a class="nav-link" href="info.html">Informações</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="meterias.html">Matériasv</a>
+              <a class="nav-link" href="meterias.html">Matérias</a>
             </li>
             <li class="nav-item">
               <a class="nav-link"  href="faq.html">FAQ</a>
@@ -66,7 +69,7 @@
     </nav>
   </header>
   <main>
-    <section id="contato">
+    <!-- <section id="contato">
       <div class="contato">
         <h3>Contato:</h3>
         <h4>Para mais informações, envie um e-mail para: contato@cursopython.com</h4>
@@ -89,45 +92,93 @@
         </form>
 
       </div>
-    </section>
+    </section> -->
 
-    <section id="inscrevase">
-      <div class="btnInscMain" onclick="openInscModal()">
-        <a class="btn red">Inscreva-se</a>
+    <section class="bg-light py-3 py-md-5">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+            <h2 class="mb-4 display-5 text-center">Contato</h2>
+            <p class="text-secondary mb-5 text-center">As melhores formas de entrar em contato conosco são pelas redes sociais ou preenchendo o formulário abaixo. Pro favor preencha todos os campos requeridos.</p>
+          </div>
+        </div>
       </div>
-      <dialog class="inscDialog">
-        <h3 class="inscDialogTitle">Formulário de Inscrição</h2>
-          <form class="inscDialogForm" id="inscDialogForm">
-            <label class="inscDialogLabel" for="firstname">Nome:</label>
-            <input type="text" id="inscDialogFirstname" name="firstname" required>
 
-            <label class="inscDialogLabel" for="lastname">Sobrenome:</label>
-            <input type="text" id="inscDialogLastname" name="lastname" required>
+      <div class="container">
+        <div class="row justify-content-lg-center">
+          <div class="col-12 col-lg-9">
+            <div class="bg-white border rounded shadow-sm overflow-hidden">
 
-            <label class="inscDialogLabel" for="email">E-mail:</label>
-            <input type="email" id="inscDialogEmail" name="email" required>
+              <form action="#!">
+                <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                  <div class="col-12">
+                    <label for="fullname" class="form-label">Nome Completo <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <img src="../assets/icons/email.svg" width="16" height="16" alt="">
+                      </span>
+                      <input type="email" class="form-control" id="email" name="email" value="" required>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label">Número de Telefone</label>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <img src="../assets/icons/phone.svg" width="16" height="16" alt="">
+                      </span>
+                      <input type="tel" class="form-control" id="phone" name="phone" value="">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Mensagem <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid">
+                      <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
 
-            <label class="inscDialogLabel" for="phone">Número de Telefone:</label>
-            <input type="tel" id="inscDialogPhone" name="phone" required placeholder="(xx)xxxxx-xxxx">
-
-            <label class="inscDialogLabel" for="about">Sobre Você:</label>
-            <textarea id="about" name="about" rows="6" required></textarea>
-
-            <div class="inscDialogError" id="inscDialogErrorM"></div>
-
-            <button class="inscDialogBtn" type="submit">Inscrever-se</button>
-            <button class="closeDialogBtn" type="button" onclick="closeInscModal()">Fechar</button>
-          </form>
-      </dialog>
-    </section>
-
-    <section class="infoSite">
-      <div class="divConteudoSite">
-
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="position-absolute w-100 bg-white border shadow-sm">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="d-sm-flex d-lg-block justify-content-center col-md-12 col-lg-2">
+          <h4>Atividade 4</h4>
+          <h4>Ricardo Muenchen</h4>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <ul class="d-flex justify-content-center justify-content-lg-end">
+            <li>
+              <a href="">
+                <img src="../assets/icons/facebook.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/icons/twitter.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/icons/instagram.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
