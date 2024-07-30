@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
 
     <link rel="stylesheet" href="./assets/css/faq.css">
-    <link rel="stylesheet" href="./assets/css/cust.css">
+    <link rel="stylesheet" href="./assets/css/crud.css">
 </head>
 
 <body>
@@ -53,6 +53,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="requestPage('./pages/todo.html')">ToDo</a>
                         </li>
+                        <!-- <li class="nav-item">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                                <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                              </div>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -60,11 +66,11 @@
     </header>
     <main>
         <section id="content">
-            <section class="quemSomos bg-light">
+            <section class="quemSomos bg-light text-black">
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-md-10 my-3">
-                            <h2>Quem Somos.</h2>
+                            <h2 class="text-center">Quem Somos.</h2>
                             <p class="textIndent textJust">
                                 A PyPath é uma empresa dedicada ao ensino de programação em Python, oferecendo cursos
                                 online
@@ -84,7 +90,7 @@
                 <div class="container">
                     <div class="row d-flex justify-content-md-center">
                         <div class="col-md-10 text-white my-3">
-                            <h2>Por que estudar Python?</h2>
+                            <h2 class="text-center">Por que estudar Python?</h2>
                             <p class="textIndent textJust">
                                 Python é uma linguagem de programação versátil, fácil de
                                 aprender e amplamente utilizada em diversos setores da
@@ -100,11 +106,11 @@
                 </div>
             </section>
 
-            <section class="utilizadoCards bg-light">
+            <section class="utilizadoCards bg-light text-black">
                 <div class="container">
                     <div class="row justify-content-md-center ">
-                        <div class="col-md-10 mt-3 text-black">
-                            <h3>No que Python é e pode ser utilizado?</h3>
+                        <div class="col-md-10 mt-3">
+                            <h3 class="text-center">No que Python é e pode ser utilizado?</h3>
 
                             <p class="textIndent textJust">
                                 Python é uma linguagem de propósito geral, o que significa que
@@ -115,7 +121,7 @@
                             <div class="col">
                                 <div class="card h-100 cardColor">
                                     <img src="./assets/images/devWebPy.jpg" class="card-img-top cardImgAjust" alt="...">
-                                    <div class="card-body text-black">
+                                    <div class="card-body ">
                                         <h5 class="card-title">Desenvolvimento Web</h5>
                                         <p class="card-text textIndent textJust">
                                             Frameworks como Django e Flask permitem criar sites e
@@ -193,7 +199,7 @@
             <section class="carouselSect d-none d-md-block">
                 <div class="container">
                     <div class="row d-flex justify-content-md-center">
-                        <div class="col-md-12 text-white my-4">
+                        <div class="col-md-12 my-4">
                             <div id="carousel" class="carousel slide carouselFotos" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
@@ -245,12 +251,12 @@
                 </div>
             </section>
 
-            <section class="resumoMaterias bg-light">
+            <section class="resumoMaterias bg-light text-black">
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-md-8 my-3">
 
-                            <h5>Durante o curso você irá passar pelas seguintes matérias:</h5>
+                            <h5 class="text-center">Durante o curso você irá passar pelas seguintes matérias:</h5>
                             <h4 class="mx-1"><strong class="textCP">1.</strong> Introdução ao Python e Configuração do
                                 Ambiente</h4>
                             <p class="mx-4 textIndent textJust">
@@ -383,7 +389,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>v
+                                </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="depoimento d-flex align-items-start">
@@ -513,7 +519,7 @@
 
                         <div class="col-md-8">
                             <nav>
-                                <div class="nav nav-tabs bg-white " id="nav-tab" role="tablist">
+                                <div class="nav nav-tabs bg-light " id="nav-tab" role="tablist">
 
                                     <button class="nav-link m-auto text-black active" id="nav-1-tab"
                                         data-bs-toggle="tab" data-bs-target="#nav-1" type="button" role="tab"
@@ -537,12 +543,12 @@
 
                                 </div>
                             </nav>
-                            <div class="tab-content bg-white" id="nav-tabContent">
+                            <div class="tab-content bg-light" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-1" role="tabpanel"
                                     aria-labelledby="nav-1-tab">
                                     <div id="divAulaGravada">
                                         <div id="divTextRec"
-                                            class="text-white text-center position-relative top-50 start-50 translate-middle container-fluid">
+                                            class="text-center position-relative top-50 start-50 translate-middle container-fluid">
                                             <h2>
                                                 Aulas Online e Gravadas:
                                             </h2>
@@ -555,7 +561,7 @@
                                 <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
                                     <div id="divMatApoio">
                                         <div id="divTextRec"
-                                            class="text-white text-center position-relative top-50 start-50 translate-middle container-fluid">
+                                            class="text-center position-relative top-50 start-50 translate-middle container-fluid">
                                             <h2>
                                                 Material de Apoio:
                                             </h2>
@@ -568,7 +574,7 @@
                                 <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
                                     <div id="divExerPrat">
                                         <div id="divTextRec"
-                                            class="text-white text-center position-relative top-50 start-50 translate-middle container-fluid">
+                                            class="text-center position-relative top-50 start-50 translate-middle container-fluid">
                                             <h2>
                                                 Exercícios Práticos:
                                             </h2>
@@ -581,7 +587,7 @@
                                 <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab">
                                     <div id="divForum">
                                         <div id="divTextRec"
-                                            class="text-white text-center position-relative top-50 start-50 translate-middle container-fluid">
+                                            class="text-center position-relative top-50 start-50 translate-middle container-fluid">
                                             <h2>
                                                 Fórum de Discussão:
                                             </h2>
@@ -595,7 +601,7 @@
                                 <div class="tab-pane fade" id="nav-5" role="tabpanel" aria-labelledby="nav-5-tab">
                                     <div id="divSup">
                                         <div id="divTextRec"
-                                            class="text-white text-center position-relative top-50 start-50 translate-middle container-fluid">
+                                            class="text-center position-relative top-50 start-50 translate-middle container-fluid">
                                             <h2>
                                                 Suporte ao Aluno:
                                             </h2>
@@ -615,9 +621,9 @@
     <footer class="position-absolute w-100 bg-white border shadow-sm">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="d-sm-flex d-lg-block justify-content-center col-md-12 col-lg-2">
-                    <h4>Atividade 4</h4>
-                    <h4>Ricardo Muenchen</h4>
+                <div class="d-sm-flex d-lg-block justify-content-center col-md-12 col-lg-2 ">
+                    <h4 class="text-black">Atividade 4</h4>
+                    <h4 class="text-black">Ricardo Muenchen</h4>
                 </div>
                 <div class="col-sm-12 col-lg-4">
                     <ul class="d-flex justify-content-center justify-content-lg-end">
@@ -644,12 +650,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/contato.js"></script>
     <script src="./assets/js/faq.js"></script>
     <script src="./assets/js/requisicoes.js"></script>
     
+    <script src="./assets/js/dev.js"></script>
 </body>
 
 </html>
