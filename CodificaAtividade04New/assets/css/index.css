@@ -135,7 +135,7 @@
 
 .recursos .nav .active{
     background: #56E1FE!important;
-    color: #fff!important;
+    /* color: #fff!important; */
 }
 
 .recursos .nav-link{
