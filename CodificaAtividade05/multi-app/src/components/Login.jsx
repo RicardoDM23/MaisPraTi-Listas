@@ -54,7 +54,7 @@ const Login = ({ onLogin }) => {
   // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault(); // Previne o comportamento padrão do formulário
-    if (username === 'admin' && password === 'password') {
+    if (username === 'admin' && password === '1234') {
       onLogin(); // Chama a função onLogin passada como prop se as credenciais estiverem corretas
     } else {
       alert('Invalid credentials'); // Exibe um alerta se as credenciais estiverem incorretas

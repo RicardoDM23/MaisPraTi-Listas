@@ -1,25 +1,42 @@
-import React from 'react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import bgNetClone from '../assets/bgNetClone.jpeg';
 
 export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    
+    if (email === "admin@teste.com" && password === "admin123") {
+      localStorage.setItem("loggedIn", true);
+      navigate("/home");
+    } else {
+      setError("Invalid email or password");
+    }
+  };
+
   return (
-    <div className="h-screen bg-cover bg-center flex flex-col justify-between relative" style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}>
-      {/* Netflix Logo Placeholder */}
+    <div className="h-screen bg-cover bg-center flex flex-col justify-between relative" style={{ backgroundImage: `url(${bgNetClone})` }}>
       <div className="absolute top-8 left-8">
-        {/* This will be replaced by an image later */}
-        <h1 className="text-red-600 text-4xl font-bold">Netflix</h1>
-        {/* <img src="/path-to-your-logo.png" alt="Netflix Logo" className="h-10" /> subistituir o h1 */}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" className="h-8" />
       </div>
 
-      {/* Login Form */}
       <div className="flex justify-center items-center flex-grow">
         <div className="bg-black bg-opacity-70 p-8 rounded-md max-w-md w-full text-white">
           <h1 className="text-3xl mb-6">Entrar</h1>
-          <form>
+          {error && <p className="text-red-500 mb-4">{error}</p>}
+          <form onSubmit={handleLogin}>
             <div className="mb-4">
               <input
                 type="text"
                 placeholder="Email ou número de celular"
                 className="w-full p-3 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-white"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <p className="text-red-500 text-sm mt-1">Informe um email ou número de telefone válido.</p>
             </div>
@@ -28,6 +45,8 @@ export default function LoginForm() {
                 type="password"
                 placeholder="Senha"
                 className="w-full p-3 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-white"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <p className="text-red-500 text-sm mt-1">A senha deve ter entre 4 e 60 caracteres.</p>
             </div>
@@ -46,7 +65,6 @@ export default function LoginForm() {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="bg-black bg-opacity-90 py-8 text-gray-400 text-sm">
         <div className="max-w-screen-lg mx-auto px-4">
           <p className="mb-4">Dúvidas? Ligue 0800 591 2876</p>
