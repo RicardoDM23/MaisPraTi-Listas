@@ -1,0 +1,5 @@
+Sobrescrita de Métodos
+
+Objetivo: Na classe Funcionario, crie um método trabalhar(), que imprime uma mensagem genérica sobre o trabalho realizado.
+Nas subclasses Gerente e Desenvolvedor, sobrescreva esse método para especificar o tipo de trabalho realizado por cada um.
+Utilize a anotação @Override e explore como ela ajuda a garantir que a sobrescrita foi feita corretamente.

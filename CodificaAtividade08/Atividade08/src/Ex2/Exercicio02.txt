@@ -1,0 +1,5 @@
+Melhorando a Classe com Validação
+
+Objetivo: Extenda a classe Produto para incluir um método aplicarDesconto(double porcentagem) que reduz o preço do produto.
+ Valide para garantir que o desconto não possa ser maior que 50%.
+ Implemente a lógica que lança uma exceção se o desconto for inválido.
