@@ -1,0 +1,68 @@
+Aula 09-09-2024
+
+- Exemplo 1: adicionar coluna descricao da tabela cargos
+    * alter table cargos add column descricao varchar(255) null after nomeCargo;
+
+- Exemplo 2: alterar nome da coluna descricao para descricaoCargo
+    * alter table cargos change column descricao descricaoCargo varchar(255) null;
+
+- Exemplo 3: alterar tipo de dados do nomeCargo para varchar(150) not null
+    * alter table cargos modify column nomeCargo varchar(150) not null;
+
+- Exemplo 4: remover a coluna descricao
+    * alter table cargos drop column descricaoCargo;
+
+- Exemplo 5: add fk
+    * alter table cargos add constraint '_fk_cargos_recursos'
+    foreign key ('recursos_idRecursos') references recursos('idRecursos')
+    on delete cascade;
+
+- Exemplo 6: add index
+    * alter table cargos add index `idx_nomeCargo` (`nomeCargo`)
+
+- Exemplo 7: add primary key
+    * alter table cargos add primary key ('descricao');
+
+
+Exercicios!
+Adicionar uma nova coluna descricao à tabela Cargos, que será do tipo VARCHAR(255) e poderá conter valores nulos. Coloque essa coluna logo após a coluna nomeCargo.
+Modificar o tamanho da coluna nomeCargo para que ela possa armazenar até 150 caracteres e garantir que não aceite valores NULL.
+Renomear a coluna nomeCargo para tituloCargo, mantendo as mesmas características (tamanho e restrições).
+Remover a coluna descricao, pois você percebeu que essa informação será mantida em outra tabela.
+Adicionar uma chave estrangeira (foreign key) na tabela Recursos, conectando a coluna Cargos_idCargos à coluna idCargos da tabela Cargos.
+Adicionar um índice na coluna tituloCargo, para otimizar as consultas baseadas nessa coluna.
+Renomear a tabela Cargos para Funcoes, para refletir melhor o conteúdo da tabela.
+Adicionar uma nova chave primária à tabela Enderecos, considerando que a coluna idEnderecos será a chave primária.
+
+----- Exemplos -----
+insert into cargos (tituloCargo, descricao)
+values ('Dsenvolvedor', 'Soluciona os nossos problemas');
+
+insert into cargos (tituloCargo, descricao)
+values	('Gerente', 'Gerencia'),
+		('Suporte', 'Resolve problema com clientes');
+
+insert into cargos (tituloCargo, descricao)
+values ('Desenvolvedor', 'Soluciona os nossos problemas');
+
+delete from cargos where idCargos = 1
+
+alter table cargos add column salario decimal(10,2) not null
+
+update cargos set salario = 10000 where idCargos = 3;
+
+
+
+
+insert into atividades (nomeAtividade) value ('AtividadeTeste');
+insert into tarefas (descricaoTarefa, idAtividades) value ('Tarefa Teste', 1);
+insert into recursos (nomeRecurso, salario) value ('Teste', 5000);
+insert into ferramentas (nomeFerramenta, versaoFerramenta) value ('Teste','v1');
+insert into ferramentasrecusos (idrecursos, idFerramentas) value (1,1);
+insert into historicosalarios (dataAumento, valorSalario, idRecursos) value ('09-09-2024', 5000, 1);
+insert into equipes (nomeEquipe, numeroRecursos) values ('Teste', 1);
+insert into endereco (rua, numero, bairro, cidade, estado, cep, idRecursos) value ('ruaTeste', '123', 'bairroTeste', 'cidadeTeste', 'tst', '123999-00', 1);
+insert into contatos (numeroContato, idRecursos, tipoTelefone) value ('123123123', 1, 2);
+insert into projetos (nomeProjeto, dataInicio, dataPrevistaTermino, status, horasPrevista, idEquipes, idRecursos)
+values ('ProjetoTeste', '2024-09-09', '2024-09-09',2, 12,1,1);
+insert into projetosatividades (idProjetos, idAtividades) values (1, 1);

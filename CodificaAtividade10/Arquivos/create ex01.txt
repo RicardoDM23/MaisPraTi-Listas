@@ -1,0 +1,27 @@
+create table ALUNOs (
+    aluno_id int not null auto_increment primary key, 
+    nome varchar(255) not null, 
+    curso varchar(255) not null, 
+    nivel varchar(255) not null, 
+    idade int not null
+);
+
+create table TURMAs (
+    turma_id int not null auto_increment primary key, 
+    nometurma varchar(255) not null, 
+    sala varchar(255) not null, 
+    horario ENUM("MANHA","TARDE","NOITE")
+);
+
+create table MATRICULAs (
+    matricula_id int not null auto_increment primary key, 
+    nota_1 int, 
+    nota_2 int, 
+    nota_3 int, 
+    nota_final int, 
+    nr_faltas int,
+    aluno_id int not null,
+    foreign key (aluno_id) references ALUNO(aluno_id) on delete cascade, 
+    turma_id int not null,
+    foreign key (turma_id) references TURMA(turma_id) on delete cascade
+);

@@ -1,0 +1,58 @@
+1. Quais os nomes de todos os alunos ?
+    Select nome from alunos;
+
+2. Quais os números das matrículas dos alunos ?
+    Select nome, matricula_id from alunos a 
+    inner join matriculas m 
+    on a.aluno_id = m.aluno_id;
+
+3. Quais os alunos que não estão matriculados em uma turma ?
+    Select nome from alunos a 
+    left join matriculas m 
+    on a.aluno_id = m.aluno_id
+    where m.matricula_id is null;
+
+4. Quais os números dos alunos matriculados em uma turma de número '30'?
+    Select count(*) from alunos a 
+    left join matriculas m 
+    on a.aluno_id = m.aluno_id
+    where m.turma_id = 30;
+
+    ou
+
+    Select m.matricula_id from aluno a 
+    left join matriculas m 
+    on a.aluno_id = m.aluno_id
+    where m.turma_id = 30;  
+
+5. Qual o horário da turma do aluno 'PERNA LONGA'?
+    Select t.horario from alunos a 
+    inner join matriculas m 
+    on a.aluno_id = m.aluno_id
+    inner join turmas t
+    on m.turma_id = t.turma_id
+    where a.nome = "Perna Longa";
+
+6. Quais os nomes dos alunos matriculados em uma turma de número '30'?
+    Select a.nome from alunos a 
+    inner join matriculas m 
+    on a.aluno_id = m.aluno_id
+    inner join turmas t
+    on m.turma_id = t.turma_id
+    where m.turma_id = 30;
+
+7. Quais os nomes dos alunos que não estão matriculados na turma de número '30'?
+    Select a.nome from alunos a 
+    inner join matriculas m 
+    on a.aluno_id = m.aluno_id
+    inner join turmas t
+    on m.turma_id = t.turma_id
+    where m.turma_id != 30;
+
+8. Quais os nomes das turmas com alunos com nota final maior que 8?
+    Select t.nometurma from alunos a 
+    inner join matriculas m 
+    on a.aluno_id = m.aluno_id
+    inner join turmas t
+    on m.turma_id = t.turma_id
+    where m.nota_final > 8;

@@ -1,0 +1,55 @@
+Selects exemplos
+
+select * from recursos
+select nomeRecurso, salario from recursos
+select nomeRecurso, salario from recursos where nomeRecurso = 'Recurso 30'
+select nomeRecurso, salario from recursos order by salario desc
+select nomeRecurso, salario from recursos limit 10
+select nomeRecurso, salario from recursos where salario > 11000 order by nomeRecurso
+
+
+select * from cargos where nomeCargo like 'D%'
+select distinct nomeCargo from cargos where nomeCargo like 'D%'
+select nomeCargo from cargos where nomeCargo like 'D%' group by nomeCargo
+
+    numero de registros (contador)
+select count(*) from cargos
+select count(*) from cargos where nomeCargo = 'Desenvolvedor'
+    soma salarios
+select sum(salario) from recursos
+    media
+select avg(salario) from recursos
+    maior valor
+select max(salario) from recursos
+    menor valor
+select min(salario) from recursos
+
+
+select nomeCargo, count(*) from cargos group by nomeCargo
+select nomeFerramenta, count(*) from ferramentas group by nomeFerramenta having count(*) > 5
+select * from cargos where nomeCargo like '__v%'
+
+select * from recursos, cargos where recursos.Cargos_idCargos = cargos.idCargos
+select nomeRecurso, nomeCargo from recursos r inner join cargos c on r.Cargos_idCargos = c.idCargos
+
+select * from esquerda X join direita on esquerda.id = direita.id
+inner join -> todos que tem correspondencia
+left join -> todos da table esqueda e os da direita que tem correspondencia
+right join -> todos os da direita e apenas os que tem correspondencia da esquerda
+
+
+select nomeRecurso, nomeCargo, nomeFerramenta, versao, count(*) 
+from recursos r 
+inner join cargos c
+	on r.Cargos_idCargos = c.idCargos
+inner join ferramentasrecursos fr
+	on fr.Recursos_idRecursos = r.idRecursos
+inner join ferramentas f
+	on fr.Ferramentas_idFerramentas = f.idFerramentas
+where c.nomeCargo = "Desenvolvedor"
+group by nomeRecurso, nomeCargo, nomeFerramenta, versao
+
+
+select nomeRecurso, concat(e.cidade,' / ',e.estado,' - ',e.rua,' Numero: ',e.numero,' CEP:',e.cep)
+from recursos r
+inner join enderecos e on r.Enderecos_idEnderecos = e.idEnderecos

@@ -1,0 +1,16 @@
+Dado o modelo relacional abaixo que visa resolver uma alocação de alunos. 
+
+Respondam as perguntas utilizando comandos SQL que atendam o solicitado:
+
+ALUNO (aluno_id, nome, curso, nivel, idade)
+TURMA (turma_id, nometurma, sala, horario)
+MATRÍCULA (matricula_id, aluno_id, turma_id, nota_1, nota_2, nota_3, nota_final, nr_faltas)
+
+1. Quais os nomes de todos os alunos ?
+2. Quais os números das matrículas dos alunos ?
+3. Quais os alunos que não estão matriculados em uma turma ?
+4. Quais os números dos alunos matriculados em uma turma de número '30'?
+5. Qual o horário da turma do aluno 'PERNA LONGA'?
+6. Quais os nomes dos alunos matriculados em uma turma de número '30'?
+7. Quais os nomes dos alunos que não estão matriculados na turma de número '30'?
+8. Quais os nomes das turmas com alunos com nota final maior que 8?

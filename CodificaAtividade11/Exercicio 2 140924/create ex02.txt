@@ -1,0 +1,24 @@
+create table comanda( 
+    idComanda int not null auto_increment primary key, 
+    data date not null, 
+    nrMesa int not null,
+    nomeCliente varchar(255) not null
+);
+
+create table cardapio(
+    idCafe int not null auto_increment primary key,
+    nomeCafe varchar(255) not null,
+    descricao text not null, 
+    composicao text not null,
+    valor decimal(10,2) not null
+);
+
+create table itemComanda(
+    idItemComanda int not null auto_increment primary key,
+    idComanda int not null,
+    foreign key (idComanda) references comanda(idComanda) on delete cascade,
+    idCafe int not null,
+    foreign key (idCafe) references cardapio(idCafe) on delete cascade,
+    UNIQUE (idComanda, idCafe),
+    quantidade int not null
+);

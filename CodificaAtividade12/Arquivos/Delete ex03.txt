@@ -1,0 +1,10 @@
+6) Excluir as ausências dos alunos nas turmas que estes são monitores;
+    DELETE FROM ausencias
+    WHERE alunomatricula IN (
+        SELECT matricula 
+        FROM alunos 
+        WHERE idaluno IN (
+            SELECT monitor_idaluno 
+            FROM turmas
+        )
+    );

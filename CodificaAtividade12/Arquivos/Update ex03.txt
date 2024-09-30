@@ -1,0 +1,22 @@
+5) Fazer alterações nas tabelas:
+5.1) Alterar o nome de todos os professores para maiúsculo;
+    UPDATE professores SET nome = UPPER(nome)
+5.2) Colocar o nome de todos os alunos que estão na turma com o maior número de alunos em maiúsculo;
+    UPDATE Alunos a
+    JOIN TurmaAluno ta ON a.matricula = ta.alunoMatricula
+    JOIN Turmas t ON ta.idTurma = t.idTurma
+    SET a.nome = UPPER(a.nome)
+    WHERE 
+        t.idTurma = (
+            SELECT 
+                t2.idTurma
+            FROM 
+                Turmas t2
+            JOIN 
+                TurmaAluno ta2 ON t2.idTurma = ta2.idTurma
+            GROUP BY 
+                t2.idTurma
+            ORDER BY 
+                COUNT(ta2.alunoMatricula) DESC
+            LIMIT 1
+        );

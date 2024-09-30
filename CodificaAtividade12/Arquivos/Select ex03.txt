@@ -1,0 +1,110 @@
+4) Fazer consultas SQL que respondam as seguintes questões:
+4.1) Listar os dados dos alunos;
+    SELECT * FROM alunos
+
+4.2) Listar os dados dos alunos e as turmas que eles estão matriculados;
+    SELECT 
+        a.nome, 
+        a.matricula, 
+        t.idTurma 
+    FROM alunos a 
+    INNER JOIN turmaaluno t ON a.matricula = t.alunoMatricula
+
+4.3) Listar os alunos que não possuem faltas;
+    SELECT * 
+    FROM alunos a 
+    LEFT JOIN ausencias au ON a.matricula = au.alunoMatricula 
+    WHERE au.alunoMatricula IS NULL
+
+4.4) Listar os professores e a quantidade de turmas que cada um leciona;
+    SELECt p.nome, count(*) 
+    FROM professores p 
+    LEFT JOIN turmas t ON p.idProfessor = t.idProfessor 
+    GROUP BY p.nome
+
+4.5) Listar nome dos professores, apenas um dos números de telefone do professor, dados (id da turma, data início, data fim e horário) das turmas que o professor leciona, curso da turma e alunos matriculados ordenado por nome do professor, id turma e nome do aluno;
+    SELECT 
+        p.nome AS nomeProfessor,
+        MIN(c.telefone) AS telefoneProfessor,
+        t.idTurma,
+        t.dataInicial,
+        t.dataFinal,
+        t.horarioAula,
+        cur.nomeCurso,
+        a.nome AS nomeAluno
+    FROM Professores p
+    JOIN Contatos c ON p.idProfessor = c.idProfessor
+    JOIN Turmas t ON p.idProfessor = t.idProfessor
+    JOIN Cursos cur ON t.idCurso = cur.idCurso
+    JOIN TurmaAluno ta ON t.idTurma = ta.idTurma
+    JOIN Alunos a ON ta.alunoMatricula = a.matricula
+    GROUP BY 
+        p.idProfessor, 
+        p.nome, 
+        t.idTurma, 
+        t.dataInicial, 
+        t.dataFinal, 
+        t.horarioAula, 
+        cur.nomeCurso, 
+        a.nome
+    ORDER BY p.nome, t.idTurma, a.nome;
+
+4.6) Listar os nomes dos professores e a turma que cada um leciona com maior número de alunos;  
+    SELECT 
+        p.nome AS nomeProfessor,
+        t.idTurma,
+        COUNT(ta.alunoMatricula) AS numeroAlunos
+    FROM Professores p
+    JOIN Turmas t ON p.idProfessor = t.idProfessor
+    JOIN TurmaAluno ta ON t.idTurma = ta.idTurma
+    GROUP BY p.idProfessor, t.idTurma
+    HAVING 
+        COUNT(ta.alunoMatricula) = (
+            SELECT MAX(contagem.numeroAlunos)
+            FROM 
+                (SELECT 
+                    t2.idProfessor,
+                    t2.idTurma,
+                    COUNT(ta2.alunoMatricula) AS numeroAlunos
+                FROM Turmas t2
+                JOIN TurmaAluno ta2 ON t2.idTurma = ta2.idTurma
+                GROUP BY t2.idProfessor, t2.idTurma
+                ) AS contagem
+            WHERE contagem.idProfessor = p.idProfessor
+        )
+    ORDER BY p.nome;
+
+
+4.7) Listar os nomes dos alunos ordenados pela turma que estes possuem maior número de faltas. Deve aparecer apenas a turma que cada um dos alunos tem maior quantidade de faltas;
+    SELECT 
+        a.nome AS nomeAluno,
+        t.idTurma,
+        MAX(au.quantidade) AS maiorQuantidadeFaltas
+    FROM Alunos a
+    JOIN Ausencias au ON a.matricula = au.alunoMatricula
+    JOIN Turmas t ON au.idTurma = t.idTurma
+    GROUP BY a.matricula, t.idTurma
+    HAVING 
+        maiorQuantidadeFaltas = (
+            SELECT MAX(au2.quantidade)
+            FROM Ausencias au2
+            WHERE au2.alunoMatricula = a.matricula
+        )
+    ORDER BY a.nome, t.idTurma;
+
+4.8) Listar a quantidade média de alunos por curso.
+    SELECT 
+        c.nomeCurso,
+        AVG(alunos_por_turma.qtdAlunos) AS mediaAlunosPorCurso
+    FROM Cursos c
+    JOIN 
+        (SELECT 
+            t.idCurso,
+            COUNT(ta.alunoMatricula) AS qtdAlunos
+        FROM Turmas t
+        JOIN TurmaAluno ta ON t.idTurma = ta.idTurma
+        GROUP BY t.idTurma
+        ) AS alunos_por_turma ON c.idCurso = alunos_por_turma.idCurso
+    GROUP BY c.idCurso
+    ORDER BY c.nomeCurso;
+
